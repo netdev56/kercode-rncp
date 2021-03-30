@@ -189,6 +189,106 @@ header .icon_menu{
 
 
 
+/* ----- PAGE DASHBOARD ----- */
+.bloc_dashboard h1{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: var(--gen_beige-clair-color);
+    padding: 5px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.bloc_dashboard h1 span{
+    text-transform: uppercase;
+}
+
+.bloc_dashboard h2{
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 60px;
+    background-color: var(--gen_beige-clair-color);
+    padding: 5px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.zone1_meteo{
+    display: flex;
+    justify-content: center;
+}
+
+.bloc-info{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.bloc-info .temperature{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.imagemeteo{
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.bloc-heure-prevision{
+    display: flex;
+    margin: 15px 60px 0;
+}
+
+.bloc-heure{
+    padding: 10px 20px;
+    border: 3px solid var(--fd-body-gris-color);
+    max-height: 90px;
+    background-color: var(--gen_beige-clair-color);
+    text-align: center;
+}
+
+.bloc-jours-prevision{
+    display: flex;
+    justify-content: center;
+}
+
+.heure-prevision{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.bloc-jours{
+    padding: 10px 30px;
+    border: 8px solid var(--fd-body-gris-color);
+    max-height: 90px;
+    background-color: var(--gen_beige-clair-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.jours-prevision{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.jours-valeur{
+    font-size: 1.2rem;
+}
+
+
+
+
 /* ----- PAGE INFORMATIONS ----- */
 /* .bloc_informationsusers h1{
     font-size: 1.5rem;
