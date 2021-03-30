@@ -268,7 +268,7 @@ header .icon_menu{
 }
 
 .bloc-jours{
-    padding: 10px 30px;
+    padding: 10px 30px 25px;
     border: 8px solid var(--fd-body-gris-color);
     max-height: 90px;
     background-color: var(--gen_beige-clair-color);
