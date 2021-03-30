@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/hydk5178/kercode-rncp/public_html/
+    - /bin/cp $DEPLOYPATH
