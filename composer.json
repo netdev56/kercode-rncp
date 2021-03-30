@@ -1,0 +1,16 @@
+{
+    "name": "kercode/projet-final",
+    "description": "Projet Final",
+    "authors": [
+        {
+            "name": "Manuel",
+            "email": "netdev56@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Project\\" : "./app"
+        }
+    },
+    "require": {}
+}

@@ -1,0 +1,461 @@
+/* ----- VARIABLES ----- */
+
+/* -- Couleurs -- */
+:root{
+    /* Général */
+    --gen_beige-clair-color: #cec2ab;
+    --blanc-color: #fff;
+    --noir-color: #000;
+
+    /* Menu */
+    --menu_noir-color: #22242A;
+    --menu_bleu-fonce-color: #02a0e2;
+    --menu_gris-clair-color: #c3c3c3;
+    --menu_gris-fonce-color: #2f323a;
+
+    /* Page Tarifs */
+    --beige-fonce-color: #b5a992;
+    --gris-fonce-color: #444;
+}
+
+
+/* -- Typographies -- */
+:root{
+    --body-font: times, sans-serif;
+    --font-size-1-5: 1.5rem;
+}
+
+
+
+/* ----- GENERAL ----- */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    /* height: 100%; */
+}
+
+
+
+
+/* ----- MENU ----- */
+
+/* -- Menu général -- */
+
+
+/* -- Menu du haut -- */
+.menu_haut{
+    /* position: fixed; */
+    z-index: 1;
+    background: var(--menu_noir-color);
+    padding: 30px 20px 20px;
+    /* width: 100%; */
+    top: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.menu_haut_div_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu_haut_titre a{
+    color: var(--gen_beige-clair-color);
+    margin: 0;
+    text-transform: uppercase;
+    font-size: var(--font-size-1-5);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.logout_btn{
+    padding: 5px;
+    background: var(--gen_beige-clair-color);
+    text-decoration: none;
+    margin: 40px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--noir-color);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-property: background;
+}
+
+.logout_btn:hover{
+    background: var(--menu_gris-clair-color); 
+}
+
+
+
+/* Menu de gauche */
+.contenu_navbar_back{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 80px);
+}
+
+.sidebar{
+    z-index: 1;
+    background: var(--menu_gris-fonce-color);
+    /* margin-top: 80px; */
+    /* padding-top: 30px; */
+    /* position: absolute; -------- */
+    left: 0;
+    width: 250px;
+    /* largeur de 9% inférieure à 100% de son élément parent */
+    /* height: 100%; -------------- */
+    /* transistion menu responsive */
+    transition-property: left;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    /* détermine le dépassement du texte  */
+    overflow-y: auto;
+    /* height: 100%; */
+}
+
+.nav_sidebar_icon img{
+    width: auto;
+    height: 1.5rem;
+    filter: invert(1) sepia(0) saturate(5) hue-rotate(175deg);
+}
+
+.nav_sidebar a{
+    font-size: 1rem;
+    color: var(--blanc-color);
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    padding-left: 30px;
+    box-sizing: border-box;
+    transition: 0.5;
+    -webkit-transition: 0.5;
+    -moz-transition: 0.5;
+    -ms-transition: 0.5;
+    -o-transition: 0.5;
+    transition-property: background;
+}
+
+.nav_sidebar a:hover{
+    background: var(--gen_beige-clair-color);
+    color: var(--blanc-black);
+}
+
+.menu-toggle{
+    color: var(--blanc-color);
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover{
+    color: var(--gen_beige-clair-color);
+}
+
+#check_toggle:checked~.sidebar{
+    left: -175px;
+}
+
+#check_toggle:checked~.sidebar .nav_sidebar a{
+    display: none;
+}
+
+#check_toggle:checked~.center_img img{
+    display: none;
+}
+
+#check_toggle:checked~.sidebar .nav_sidebar_icon a{
+    display: flex;
+    margin-left: 175px;
+    margin-top: 10px;
+}
+
+.nav_sidebar_icon a{
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.nav_sidebar_icon a:hover{
+    filter: invert(0.5) sepia(1) saturate(1) hue-rotate(357deg);
+    -webkit-filter: invert(0.5) sepia(1) saturate(1) hue-rotate(357deg);
+}
+
+.nav_sidebar_icon a{
+    display: none;
+}
+
+
+/* Contenu */
+.back_responsive{
+    /* width: calc(100% - 260px); */
+    margin-left: 20px;
+    /* margin-top: 60px; */
+    /* padding: 20px; */
+    transition: 00.5s;
+    -webkit-transition: 00.5s;
+    -moz-transition: 00.5s;
+    -ms-transition: 00.5s;
+    -o-transition: 00.5s;
+}
+
+#check_toggle:checked~.back_responsive{
+    margin-left: 80px;
+    /* margin-top: 40px; */
+}
+
+#check_toggle{
+    display: none;
+}
+
+.footer_position{
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0 20px;
+    width: 100%;
+}
+
+/* Menu responsive  */
+.navbar{
+    display: none;
+}
+
+.mobile_nav{
+    display: none;
+}
+
+#check_toggle_responsive{
+    display: none;
+}
+
+
+/* Sous-menu - Pages */
+.nav_sidebar_submenu{
+    padding-left: 50px;
+    /* display: block; */
+}
+
+.nav_sidebar_submenu a:hover{
+    color: var(--noir-color);
+    background: var(--menu_gris-clair-color);
+}
+
+
+
+
+
+
+
+/* ----- PAGE TARIFS ----- */
+
+/* -- Menu accordéon -- */
+/* Boutons utilisés pour ouvrir et fermer le panneau d'accordéon */
+.accordion {
+    background-color: var(--gen_beige-clair-color);
+    color: var(--gris-fonce-color);
+    cursor: pointer;
+    padding: 18px;
+    margin-bottom: 2px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* Ajoute une couleur d'arrière-plan au bouton si on clique dessus + au survol la souris dessus */
+.active, .accordion:hover {
+    background-color: var(--beige-fonce-color); 
+}
+  
+
+/* Panneau d'accordéon masqué par défaut */
+.panel {
+    padding: 0 18px;
+    margin-bottom: 2px;
+    display: none;
+    background-color: grey;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+
+
+/* ----- RESPONSIVE CSS ----- */
+
+@media screen and (max-width: 780px){
+
+    /* Menu de gauche */
+    .sidebar{
+        display: none;
+    }
+
+    /* Bouton toggle - menu gauche  */
+    #sidebar_btn{
+        display: none;
+    }
+
+
+
+
+    /* Contenu */
+    .back_responsive{
+        margin-left: 0;
+        margin-top: 0;
+        padding: 10px 20px;
+        transition: 0s;
+        -webkit-transition: 0s;
+        -moz-transition: 0s;
+        -ms-transition: 0s;
+        -o-transition: 0s;
+    }
+
+    #check_toggle:checked~.back_responsive{
+        margin-left: 0;
+    }
+
+
+
+
+    /* FOOTER  */
+    .footer_position{
+        display: none;
+    }
+
+
+
+
+    /* Menu responsive  */
+    .navbar{
+        /* background: var(--menu_noir-color); */
+        background: var(--gen_beige-clair-color);
+        /* width: calc(100% - 0%); */
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .menu-toggle_mobile_nav{
+        color: var(--noir-color);
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition:0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+        -ms-transition:0.5s;
+        -o-transition:0.5s;
+        transition-property: color;
+    }
+
+    .navbar .menu-toggle_mobile_nav:hover{
+        color: var(--blanc-color);
+    }
+
+    .mobile_nav{
+        display: none;
+        /* display: block; */
+        /* width: calc(100% - 0%); */
+    }
+
+    #check_toggle_responsive:checked~.mobile_nav{
+        /* display: none; */
+        display: block;
+    }
+
+    .mobile_nav_items{
+        background: #2f323a;
+}
+
+    .mobile_nav_items a{
+        font-size: 1.2rem;
+        color: var(--blanc-color);
+        display: block;
+        text-align: center;
+        letter-spacing: 1px;
+        line-height: 60px;
+        text-decoration: none;
+        /* box-sizing: border-box; */
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition-property: background, color;
+    }
+
+    .mobile_nav_items a:hover{
+        color: var(--noir-color);
+        background: var(--gen_beige-clair-color);
+    }
+
+
+    /* Sous-menu */
+    .mobile_nav_submenu a{
+        font-size: 1.1rem;
+        line-height: 50px;
+    }
+    
+    .mobile_nav_submenu a:hover{
+        color: var(--noir-color);
+        background: var(--menu_gris-clair-color);
+    }
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
