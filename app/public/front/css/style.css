@@ -4,38 +4,30 @@
 	src: url('/app/public/front/policedecriture/cinzel-regular.otf');
 }
 
-/* ----- VARIABLES ----- */
 
+
+
+/* ----- VARIABLES ----- */
 /* -- Couleurs -- */
 :root{
-    /* Général */
-    --gen_beige-clair-color: #cec2ab;
     --blanc-color: #fff;
     --noir-color: #000;
-    --fd-menu-beige: #ae9978;
-    --fd-menu-noir-opac:rgba(0,0,0,0.7);
     --rouge-color: #ff0000;
+    --vert-color: #49AB44;
     --fd-body-marron-color: #141414;
+    --gen_beige-clair-color: #cec2ab;
     --beige-fonce-color: #b5a992;
-
-    /* Page Accueil */
-    --fd-slide-noir-opac: rgba(0,0,0,0.8);
-
-    /* Page Tarifs */
+    --fd-menu-beige: #ae9978;
     --gris-fonce-color: #444;
     --gris-clair-color: #e0e0e0;
-
-    /* Page Actualités */
     --fd-card-actus-gris-color: #f0f0f0;
-
-    /* Page Contact */
     --champ-contact-color: rgba(0, 0, 0, 0);
     --champ-contact-hover-color: rgba(0, 0, 0, 0.1);
-
-    /* Cookies - Page Contact */
-    --vert-color: #49AB44;
-    
+    --fd-slide-noir-opac: rgba(0,0,0,0.8);
+    --fd-menu-noir-opac:rgba(0,0,0,0.7); 
 }
+
+
 
 
 /* ----- GENERAL ----- */
@@ -87,8 +79,8 @@ body{
 
 
 
-/* ----- COOKIES ----- */
 
+/* ----- COOKIES ----- */
 /* -- Bannière cookie -- */
 .banner-cookie{
     border-top: solid 2px var(--noir-color); 
@@ -129,6 +121,8 @@ body{
 .button-banner a:hover{
     color: var(--noir-color);
 }
+
+
 
 
 /* ----- MENU ----- */
@@ -239,7 +233,9 @@ header .btn_menu{
 
 
 
-/* ----- PAGE ACCUEIL -Slide ----- */
+
+/* ----- PAGE ACCUEIL ----- */
+/* ----- PAGE ACCUEIL - Slide ----- */
 .slides{
     width: 100%;
     height: 100vh;
@@ -339,9 +335,7 @@ header .btn_menu{
 
 
 
-
-
-/* ----- PAGE ACCUEIL ----- */
+/* ----- PAGE accueil ----- */
 .articles_accueil_style h3{
     font-size: 36px;
     color: var(--blanc-color);
@@ -370,7 +364,6 @@ header .btn_menu{
 
 .zone2_accueil{
     margin: 0 0 0 40px;
-    
 }
 
 .bloc-zone2-accueil img{
@@ -385,14 +378,14 @@ header .btn_menu{
 
 .zone2_accueil p{
     margin-top: 15px;
-    
 }
 
 .zone3_accueil{
     text-align: center;
     margin: 30px 0 30px;
-    
 }
+
+
 
 
 /* ----- PAGE ACCUEIL - Cartes Images ----- */
@@ -480,8 +473,6 @@ header .btn_menu{
     margin-bottom: 10px;
     font-family: cinzel; 
 }
-
-
 
 
 
@@ -582,21 +573,6 @@ header .btn_menu{
 
 
 /* ----- PAGE TARIFS ----- */
-/* .bloc_titre_tarifs{
-    text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
-}
-
-.bloc_titre_tarifs h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: cinzel; 
-} */
-
-/* -- Menu accordéon -- */
-/* Boutons utilisés pour ouvrir et fermer le panneau d'accordéon */
 .accordion {
     background-color: var(--gen_beige-clair-color);
     color: var(--gris-fonce-color);
@@ -617,13 +593,11 @@ header .btn_menu{
     text-transform: uppercase;
 }
 
-
 /* Ajoute une couleur d'arrière-plan au bouton si on clique dessus + au survol la souris dessus */
 .active, .accordion:hover {
     background-color: var(--fd-menu-beige); 
 }
   
-
 /* Panneau d'accordéon masqué par défaut */
 .panel {
     padding: 15px 15px;
@@ -636,7 +610,7 @@ header .btn_menu{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    color: black;
+    color: var(--noir-color);
 }
 
 .panel .modalite_tarifs{
@@ -647,7 +621,7 @@ header .btn_menu{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
-    background-color: white;
+    background-color: var(--blanc-color);
 }
 
 .bloc_table_entete{
@@ -691,22 +665,7 @@ header .btn_menu{
 
 
 
-
-
 /* ----- PAGE ACTUALITES ----- */
-/* .bloc_titre_actus{
-    text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
-}
-
-.bloc_titre_actus h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: cinzel; 
-} */
-
 .bloc_articles_actus{
     display: flex;
     justify-content: center;
@@ -762,14 +721,11 @@ header .btn_menu{
     color: var(--blanc-color);
     cursor: pointer;
     font-family: cinzel; 
-
 }
 
 .card_actus_btn:hover{
     color: var(--noir-color);
 }
-
-
 
 
 
@@ -820,21 +776,40 @@ header .btn_menu{
 
 
 
-
-/* ----- PAGE CONTACT ----- */
-/* .bloc_titre_contact{
-    text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
+/* ----- PAGE LIVRE D'OR ----- */
+.bloc_titre_general p{
+    font-size: 1.1rem;
+    margin: 10px;
 }
 
-.bloc_titre_contact h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: cinzel; 
-} */
+.bloc_commentaires_livre{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.commentaires_livre{
+    border: 1px solid var(--fd-menu-beige);
+    width: 350px;
+    margin: 20px;
+    padding: 20px;
+    min-height: 290px;
+}
+
+.post_livre{
+    color: var(--blanc-color);
+    margin-bottom: 15px;
+}
+
+.post_livre span{
+    font-size: 1.3rem;
+    color: var(--fd-menu-beige);
+}
+
+
+
+
+/* ----- PAGE CONTACT ----- */
 .bloc_formulaire_contact{
     display: flex;
 }
@@ -920,7 +895,7 @@ header .btn_menu{
 }
 
 .icones_texte_contact{
-    color: black;
+    color: var(--noir-color);
     font-size: 1rem;
     padding: 10px;
 }
@@ -935,9 +910,8 @@ header .btn_menu{
     height: auto;
 }
 
-
 .erreur_contact{
-    color: white;
+    color: var(--blanc-color);
     text-align: center;
     font-weight: bold;
     padding: 20px 0;
@@ -952,53 +926,6 @@ header .btn_menu{
     -o-border-radius: 8px;
 }
 
-
-
-
-
-
-/* ----- PAGE LIVRE D'OR ----- */
-/* .bloc_titre_livre{
-    text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
-}
-
-.bloc_titre_livre h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: cinzel; 
-} */
-
-.bloc_titre_general p{
-    font-size: 1.1rem;
-    margin: 10px;
-}
-
-.bloc_commentaires_livre{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.commentaires_livre{
-    border: 1px solid var(--fd-menu-beige);
-    width: 350px;
-    margin: 20px;
-    padding: 20px;
-    min-height: 290px;
-}
-
-.post_livre{
-    color: var(--blanc-color);
-    margin-bottom: 15px;
-}
-
-.post_livre span{
-    font-size: 1.3rem;
-    color: var(--fd-menu-beige);
-}
 
 
 
@@ -1034,6 +961,7 @@ header .btn_menu{
 
 
 
+
 /* ----- PAGE MENTIONS LEGALES ----- */
 .bloc_mentionslegales h2{
     font-size: 1.5rem;
@@ -1061,7 +989,7 @@ header .btn_menu{
 
 
 
-/* ----- PAGE COOKIE ----- */
+/* ----- PAGE POLITIQUE DE CONFIDENTIALITE ----- */
 .bloc_cookie h2{
     font-size: 1.5rem;
     margin: 20px 0 10px;
@@ -1094,7 +1022,6 @@ header .btn_menu{
     font-size: 1.1rem;
     margin: 20px;
 }
-
 
 
 
@@ -1208,21 +1135,6 @@ footer .coordonnees-aligne p{
     }
 
 
-    /* --- FOOTER --- */
-    footer{
-        justify-content: center;
-        flex-wrap: wrap-reverse;
-        text-align: center;
-    }
-
-    footer .coordonnees-aligne{
-        flex-wrap: wrap;
-    }
-
-    .btn-seconnecter{
-        margin: 20px;
-    }
-
 
 
     /* ----- PAGE ACCUEIL -Slide ----- */
@@ -1242,6 +1154,8 @@ footer .coordonnees-aligne p{
     .slides-texte p{
         font-size: 1.2rem;
     }
+
+
 
 
     /* ----- PAGE ACCUEIL ----- */
@@ -1269,6 +1183,7 @@ footer .coordonnees-aligne p{
 
 
 
+
     /* ----- PAGE LE GITE ----- */
     .bloc_gite_zone1{
         display: block;
@@ -1281,6 +1196,7 @@ footer .coordonnees-aligne p{
     .bloc_gite_zone1_texte{
         margin: 20px 30px 0;
     }
+
 
 
 
@@ -1298,8 +1214,25 @@ footer .coordonnees-aligne p{
 
 
 
-}
+    /* --- FOOTER --- */
+    footer{
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
 
+    footer .coordonnees-aligne{
+        flex-wrap: wrap;
+    }
+
+    .btn-seconnecter{
+        margin: 20px;
+    }
+
+
+
+
+}
 
 
 
@@ -1318,6 +1251,7 @@ footer .coordonnees-aligne p{
 
 
 
+
     /* ----- PAGE ACCUEIL -Slide ----- */
     .slides-texte{
         max-width: 100%;
@@ -1330,7 +1264,6 @@ footer .coordonnees-aligne p{
         -ms-transform: initial;
         -o-transform: initial;
     }
-
 
     .slides-texte h1{
         font-size: 1.2rem;
@@ -1346,6 +1279,8 @@ footer .coordonnees-aligne p{
     }
 
 
+
+
     /* ----- PAGE LE GITE ----- */
     .bloc_gite_zone1_images{
         flex-wrap: wrap;
@@ -1357,10 +1292,13 @@ footer .coordonnees-aligne p{
 
 
 
+
     /* ----- PAGE LIVRE D'OR ----- */
     .commentaires_livre{
         width: 100%;
     }
+
+
 
 
     /* ----- PAGE CONTACT ----- */
@@ -1375,13 +1313,11 @@ footer .coordonnees-aligne p{
     .bloc_contact_droite{
         width: 100%;
     }
-    
 
 
 
-    
+
 }
-
 
 
 
@@ -1392,6 +1328,8 @@ footer .coordonnees-aligne p{
     .card_actus{
         max-width: 100%;
     }
+
+
 
 
 }

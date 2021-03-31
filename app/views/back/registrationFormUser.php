@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- Feuille de style CSS  -->
+    <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
 </head>
 <body class="body_connexion">

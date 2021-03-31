@@ -1,4 +1,4 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 
@@ -37,19 +37,11 @@
 
                 <tr>
                     <td><label>Changer le role :</label></td>
-                    <td>
-                    <?php if($managementEditAdmin['roleusers'] = 'user'){ ?>
-                    <input type="radio" id="roleusers" name="roleusers" value="user">
-                        <label for="roleusers">Utilisateur</label>
-
-                        <?php }else{ ?>
-
-                        <input type="radio" id="roleusers" name="roleusers" value="admin">
-                        <label for="roleusers">Administrateur</label>
-                        
-                        <?php } ?>
-
-                        </td>
+                    <td><select name="roleusers">
+                            <option value="admin" selected>Administrateur</option>
+                            <option value="user">Utilisateur</option>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
@@ -72,8 +64,8 @@
 </section>
 
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

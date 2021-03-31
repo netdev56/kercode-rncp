@@ -12,11 +12,9 @@ class ContactFormManager extends Manager{
 
         $req = $bdd->prepare('INSERT INTO contactform(lastname_contactform, email_contactform, telephone_contactform, message_contactform, rgpd_contactform) VALUE(?, ?, ?, ?, ?)');
         $req->execute(array($lastname, $email, $telephone, $message, $rgpdContacform));
+        
         return $req;
     }
-
-
-
 
 
 
@@ -28,6 +26,7 @@ class ContactFormManager extends Manager{
         $bdd = $this->bdConnect();
 
         $req = $bdd->query("SELECT * FROM contactform ORDER BY id_contactform DESC");
+
         return $req;
     }
 
@@ -41,8 +40,6 @@ class ContactFormManager extends Manager{
 
         return $req;
     }
-
-
 
 
 

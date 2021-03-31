@@ -1,9 +1,9 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <section class="taille_1170 bloc_dashboard">
 
-<!-- zone 1 -->
+<?php // zone 1 - Temps de la journée ?>
 <h1>Bonjour <span> <?= $_SESSION['firstname'] ?></span>, Quel temps fait-il aujourd'hui à Pluneret ?</h1>
 
 
@@ -53,12 +53,10 @@
     </div>
 </div>
 
-
-<!-- fin zone 1 -->
 </div>
 
 
-<!-- zone 2 -->
+<?php // zone 2 - Températures de la semaine ?>
 <h2>Températures de la semaine</h2>
 
 <div class="bloc-jours-prevision">
@@ -92,22 +90,14 @@
     </div>
 </div>
 
-<!-- fin zone 2 -->
-
-
-
-
-
-
-
 </section>
 
 
-<!-- Script JS pour la station de météo  -->
+<?php // Script JS pour la station de météo ?>
 <script type="module" src="app/public/back/js/meteo.js"></script>
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

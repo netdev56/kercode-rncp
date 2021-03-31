@@ -1,4 +1,4 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <?php $articleImgAdmin = $allArticlesImgAdmin->fetch() ?>
@@ -29,18 +29,14 @@
                 </tr>
         </table>
 
-        <!-- <div>
-            <input type="submit" value="Modifier" name="submit" id="upload">
-        </div>-->
     </form>
 
-    </div>
 </section>
 
 
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

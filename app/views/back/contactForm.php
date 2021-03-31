@@ -1,4 +1,4 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 
@@ -6,7 +6,7 @@
 
     <?php foreach($allMessaging as $allMessage){ ?>
 
-
+        <?php // Bloc des coordonnées ?>
         <div class="bloc_messagerie_coordonnes">
             <div class="style_messagerie_coordonnes">
                 <label>Nom : </label> <?= htmlspecialchars($allMessage['lastname_contactform']) ?>
@@ -21,6 +21,8 @@
             </div>
 
         </div>
+
+        <?php // Bloc du message + validation RGPD ?>
         <div class="bloc_messagerie_message">
 
             <div>
@@ -37,15 +39,13 @@
             </div>
         </div>
 
-        
-
     <?php } ?>
 
 </section>
 
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

@@ -4,13 +4,6 @@ namespace Project\Models;
 
 class ManagementAdminManager extends Manager{
 
-    ///////FRONT
-
-
-
-
-
-
     ///////BACK
     
     // Page : gestion des administrateurs
@@ -27,6 +20,7 @@ class ManagementAdminManager extends Manager{
     // Supprimer le compte administrateur
     public function deletAdminManagement($id){
         $bdd = $this->bdConnect();
+        
         $req = $bdd->prepare("DELETE FROM users WHERE id = ?");
         $req->execute(array($id));
 
@@ -70,8 +64,8 @@ class ManagementAdminManager extends Manager{
         
         $createAdminManagement = $bdd->prepare('INSERT INTO users(pseudo, lastname, firstname, email, pass, roleusers) VALUE (?, ?, ?, ?, ?, "admin")');
         $createAdminManagement->execute(array($pseudo, $lastname, $firstname, $mail, $pass));
-        return $createAdminManagement;
 
+        return $createAdminManagement;
     }
 
 

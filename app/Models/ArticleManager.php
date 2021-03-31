@@ -11,21 +11,20 @@ class ArticleManager extends Manager{
         $bdd = $this->bdConnect();
 
         $req = $bdd->query("SELECT * FROM articles ORDER BY articles.id DESC");
+
         return $req;
     }
+
 
     // Page actualités - Single
     public function readArticlesSingle($id){
         $bdd = $this->bdConnect();
 
         $req = $bdd->prepare("SELECT articles.*, users.firstname  FROM articles, users WHERE articles.idarticlesusers = users.id AND articles.id = ?");
-
         $req->execute(array($id));
+
         return $req;
-}
-
-
-
+    }
 
 
 
@@ -37,6 +36,7 @@ class ArticleManager extends Manager{
         $bdd = $this->bdConnect();
 
         $req = $bdd->query("SELECT articles.*, users.firstname  FROM articles, users WHERE articles.idarticlesusers = users.id ORDER BY articles.id DESC");
+
         return $req;
     }
 
@@ -82,9 +82,10 @@ class ArticleManager extends Manager{
     // Ajouter un article d'actualités ADMIN
     public function createAdminArticle($title, $content, $description_articles, $id_user){
         $bdd = $this->bdConnect();
-        $req = $bdd->prepare("INSERT INTO articles(title, content, description_articles, idarticlesusers) VALUE(?, ?, ?, ?)");
 
+        $req = $bdd->prepare("INSERT INTO articles(title, content, description_articles, idarticlesusers) VALUE(?, ?, ?, ?)");
         $req->execute(array($title, $content, $description_articles, $id_user));
+
         return $req;
     }
 
@@ -99,9 +100,9 @@ class ArticleManager extends Manager{
         return $req;
     }
 
+
     // Editer une Image articles d'actualités ADMIN
-    public function upImageArticle($id, $titre_img_articles, $target_file){
-      
+    public function upImageArticle($id, $titre_img_articles, $target_file){ 
         $bdd = $this->bdConnect();
         
         $req = $bdd->prepare("UPDATE articles SET titre_img_articles = :titre_img_articles, image_articles = :image_articles WHERE id = :id");
@@ -116,6 +117,5 @@ class ArticleManager extends Manager{
 
 
 
-
-
+    
 }

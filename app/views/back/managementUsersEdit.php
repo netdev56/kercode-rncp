@@ -1,4 +1,4 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 
@@ -19,7 +19,10 @@
                     <td><label for="lastname">Nom :</label></td>
                     <td><input type="text" name="lastname" id="lastname" placeholder="Votre nom" value="<?= $managementEditUser['lastname'] ?>"></td>
                 </tr>
-
+                <tr>
+                    <td><label for="lastname">role :</label></td>
+                    <td><input type="text" name="role" id="lastname" placeholder="Votre nom" value="<?= $managementEditUser['roleusers'] ?>"></td>
+                </tr>
                 <tr>
                     <td><label for="firstname">Prénom :</label></td>
                     <td><input type="text" name="firstname" id="firstname" placeholder="Votre prénom" value="<?= $managementEditUser['firstname'] ?>"></td>
@@ -37,19 +40,12 @@
 
                 <tr>
                     <td><label>Changer le role :</label></td>
-                    <td>
-                    <?php if($managementEditUser['roleusers'] = 'user'){ ?>
-                    <input type="radio" id="roleusers" name="roleusers" value="admin">
-                        <label for="roleusers">Administrateur</label>
 
-                        <?php }else{ ?>
-
-                        <input type="radio" id="roleusers" name="roleusers" value="user">
-                        <label for="roleusers">Utilisateur</label>
-                        
-                        <?php } ?>
-
-                        </td>
+                    <td><select name="roleusers">
+                            <option value="admin">Administrateur</option>
+                            <option value="user" selected>Utilisateur</option>
+                        </select>
+                    </td>
                 </tr>
 
                 <tr>
@@ -71,8 +67,8 @@
 </section>
 
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

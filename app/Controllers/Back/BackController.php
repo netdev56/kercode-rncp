@@ -2,20 +2,16 @@
 
 namespace Project\Controllers\Back;
 
-// Use Project\Models\UsersManager;
-
 class BackController{
 
     // Page de connexion Administration
     function connexionAdministration(){
-
         require 'app/views/back/connexionUsers.php';
     }
 
 
     // Page d'inscription Utilisateur
     function registrationFormUser(){
-
         require 'app/views/back/registrationFormUser.php';
     }
 
@@ -30,9 +26,7 @@ class BackController{
 
 
     // Formulaire de connexion Administration
-    function connexionAdmin($mail, $pass){
-        
-
+    function connexionAdmin($mail, $pass){ 
         $usersManager = new \Project\Models\UsersManager();
         $connexionAd = $usersManager->recupInfosConnexion($mail, $pass);
         $result = $connexionAd->fetch();
@@ -48,7 +42,6 @@ class BackController{
         $_SESSION['id'] = $result['id'];
         $_SESSION['roleusers'] = $result['roleusers'];
 
-
         if($isPasswordCorrect){
             require 'app/views/back/dashboard.php';
         }else{
@@ -63,7 +56,7 @@ class BackController{
         require 'app/views/back/dashboard.php';
     }
 
-    
+
 
     // LIVRE D'OR
     // Page des commentaires du livre d'or de l'utilisateur USER
@@ -74,7 +67,6 @@ class BackController{
         require 'app/views/back/guestbook.php';
     }
 
-
     // Page : Afficher des commentaires du livre d'or de l'utilisateur ADMIN
     function guestbookAdmin($id){
         $guestbookAdmin = new \Project\Models\GuestbookCommentManager();
@@ -83,21 +75,16 @@ class BackController{
         require 'app/views/back/guestbook.php';
     }
 
-
     // Ajouter un commentaire dans le Guestbook
     function createComment($comments, $is_user){
         $createComment = new \Project\Models\GuestbookCommentManager();
         $createComments = $createComment->createComment($comments, $is_user);
 
         header('Location: administration.php?action=dashboard');
-        // require 'app/views/back/guestbook.php';
-     
     }
 
-
     // Page : Afficher éditer un commentaire du Guestbook
-    function commentsEdition($id_guestbooks)
-    {
+    function commentsEdition($id_guestbooks){
         $commentsEdition = new \Project\Models\GuestbookCommentManager();
         $commentEdition = $commentsEdition->editionComment($id_guestbooks);
         
@@ -105,17 +92,13 @@ class BackController{
 
     }
 
-
     // Editer le commentaire dans la page guestbookEditComment.php
-    function editCommentsGuestbook($id_editComments, $edComments)
-    {
+    function editCommentsGuestbook($id_editComments, $edComments){
         $editComment = new \Project\Models\GuestbookCommentManager();
         $editComments = $editComment->editComment($id_editComments, $edComments);
 
         header('Location: administration.php?action=dashboard');
-        // require 'app/views/back/guestbook.php';
     }
-
 
     // Supprimer un commentaire du livre d'or
     function deletComment($id){
@@ -124,7 +107,6 @@ class BackController{
 
         header('Location: administration.php?action=dashboard');
     }
-
 
 
 
@@ -137,7 +119,6 @@ class BackController{
         require 'app/views/back/actualites.php';
     }
 
-
     // Supprimer un articles d'actualités ADMIN
     function deletArticleAdmin($id){
         $article = new \Project\Models\ArticleManager();
@@ -145,7 +126,6 @@ class BackController{
 
         header('Location: administration.php?action=actualitesAdmin');
     }
-
 
     // Page éditer un article d'actualités ADMIN
     function editArticleAdmin($id){
@@ -155,7 +135,6 @@ class BackController{
         require 'app/views/back/actualitesEditArticle.php';
     }
 
-
     // Editer un article d'actualités ADMIN
     function editUpdateArticleAdmin($id, $title, $content, $description_articles){
         $updateArticleAdmin = new \Project\Models\ArticleManager();
@@ -164,14 +143,12 @@ class BackController{
         header('Location: administration.php?action=actualitesAdmin');
     }
 
-
     // Ajouter un article d'actualités ADMIN
     function createArticleAdmin($title, $content, $description_articles, $id_user){
-
         $createArticleAdmin = new \Project\Models\ArticleManager();
         $createArticlesAdmin = $createArticleAdmin->createAdminArticle($title, $content, $description_articles, $id_user);
+        
         header('Location: administration.php?action=actualitesAdmin');
-     
     }
 
     // Page Image articles d'actualités ADMIN
@@ -183,42 +160,38 @@ class BackController{
     }
 
     // Editer une Image articles d'actualités ADMIN
-    function updateImagesArticle($id, $titre_img_articles)
-    {
-        $target_dir = "app/public/front/images/articles/"; //Spécifie le répertoire où l'image sera stocké
+    function updateImagesArticle($id, $titre_img_articles){
+        $target_dir = "app/public/front/images/articles/"; // Spécifie le répertoire où l'image sera stocké
 
-        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); //Spécifie le chemin du fichier à télécharger
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
-        $uploadOK = 1; //N'est pas encore utilisé (sera utilisé plus tard)
+        $uploadOK = 1;
 
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); //contient l'extension du fichier
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); // contient l'extension du fichier
 
-        //on vérifie que le fichier image est une image réelle
+        // on vérifie que le fichier image est une image réelle
         if (isset($_POST["submit"])){
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if ($check !== false){
-                //Check file size
+                // Vérifie la taille du fichier
                 if ($_FILES["fileToUpload"]["size"] > 500000){
                     echo "Désolé, votre fichier est trop volumineux.";
                     $uploadOK = 0;
                 }
 
-                //All file formats
+                // Tous les formats des fichiers
                 if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType !="gif" && $imageFileType !="webp"){
-                    echo "Seuls les formats JPG, JPEG, PNGn WEBP & GIF files sont authorisé.";
+                    echo "Seuls les formats JPG, JPEG, PNG WEBP & GIF sont authorisé.";
                     $uploadOK = 0;
                 }
 
-                //Check if $uploadOK is set to 0 by an error
                 if ($uploadOK == 0){
-                    echo "Désolé, votre avatar n'a pu être envoyé.";
-                    //if everything is ok, try to upload file
+                    echo "Désolé, votre image n'a pas pu être envoyé.";
                 }else{
                     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)){
                         $imagesManager = new \Project\Models\ArticleManager();
                         $uploadImgArticles = $imagesManager->upImageArticle($id,$titre_img_articles, $target_file);
                         
-                        // header('Location: indexAdmin.php?action=dashboard');
                         require 'app/views/back/dashboard.php';
                     }else{
                         echo "Désolé, une erreur est survenue dans l'envoi de votre fichier.";
@@ -233,7 +206,6 @@ class BackController{
     
 
 
-
     // INFORMATION UTILISATEUR
     // Page : éditer les informations de l'utilisateur
     function editInfosUser($id_user){
@@ -241,9 +213,7 @@ class BackController{
         $infosUsersAdmin = $infosUsersEdition->infoUserEdition($id_user);
         
         require 'app/views/back/informationsUsers.php';
-
     }
-
 
     // Editer les informations de l'utilisateur dans la page informationsUsers.php
     function editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email, $pass){
@@ -251,9 +221,7 @@ class BackController{
         $editinfos = $editinfosusers->editinfosuser($id_user, $pseudo, $lastname, $firstname, $email, $pass);
 
         header("Location: administration.php?action=editInfosUsers&id=$id_user");
-
     }
-
 
     // Supprimer le compte utilisateur
     function deletInfoUser($id){
@@ -262,7 +230,6 @@ class BackController{
 
         require 'app/views/front/accueil.php';
     }
-
 
 
 
@@ -275,7 +242,6 @@ class BackController{
         require 'app/views/back/managementAdmin.php';
     }
 
-
     // Supprimer un compte ADMIN
     function deletAdminManag($id){
         $deletAdminManag = new \Project\Models\ManagementAdminManager();
@@ -284,16 +250,13 @@ class BackController{
         header("Location: administration.php?action=managementAdmin&id=$id");
     }
 
-
     // Page : éditer un compte ADMIN
     function adminEditionManag($id_user){
         $managementAdminEdition = new \Project\Models\ManagementAdminManager();
         $managementEditionAdmin = $managementAdminEdition->adminManagementEdition($id_user);
         
         require 'app/views/back/managementAdminEdit.php';
-
     }
-
 
     // Editer un compte ADMIN managementAdminEdit.php
     function editAdminsManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
@@ -301,9 +264,7 @@ class BackController{
         $managementEditionAdmins = $managementAdminsEdition->adminsManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
 
         header("Location: administration.php?action=managementAdmin&id=$id_users");
-
     }
-
 
     // Ajouter un compte ADMIN
     function createAdminsManagement($pseudo, $lastname, $firstname, $mail, $pass){
@@ -315,7 +276,6 @@ class BackController{
     
 
 
-
     // GESTION UTILISATEURS
     // Page : gestion des utilisateurs
     function managementUsersAll($id_users){
@@ -325,16 +285,13 @@ class BackController{
         require 'app/views/back/managementUsers.php';
     }
     
-
     // Supprimer un compte USER
     function deletUserManag($id){
         $deletUserManag = new \Project\Models\ManagementUserManager();
         $deletUserMana = $deletUserManag->deletUserManagement($id);
 
         header("Location: administration.php?action=managementUsers&id=$id");
-        // require 'app/views/front/accueil.php';
     }
-
 
     // Page : éditer un compte USER
     function userEditionManag($id_user){
@@ -342,9 +299,7 @@ class BackController{
         $managementEditionUser = $managementUserEdition->userManagementEdition($id_user);
         
         require 'app/views/back/managementUsersEdit.php';
-
     }
-
 
     // Editer un compte USER managementUserEdit.php
     function editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
@@ -352,9 +307,7 @@ class BackController{
         $managementEditionUsers = $managementUsersEdition->usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
         
         header("Location: administration.php?action=managementUsers&id=$id_users");
-
     }
-
 
     // Ajouter un compte USER
     function createUsersManagement($pseudo, $lastname, $firstname, $mail, $pass){
@@ -364,7 +317,6 @@ class BackController{
         header('Location: administration.php?action=managementUsers');
     }
         
-
 
 
     // MESSAGERIE
@@ -386,6 +338,7 @@ class BackController{
     }
 
 
+
     // PAGE D'ERREUR
     // Formulaire
     function erreurFormAdmin(){
@@ -393,7 +346,6 @@ class BackController{
     }
 
     
-
 
 
 }

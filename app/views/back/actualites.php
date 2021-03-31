@@ -1,8 +1,9 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <section class="taille_1170 bloc_gestions">
 
+<?php // Formulaire pour ajouter un article ?>
 <h1>Ajouter un article</h1>
 
     <form action="administration.php?action=createArticlesAdmin" method="post" enctype="multipart/form-data">
@@ -26,7 +27,7 @@
 
 
 
-
+<?php // Articles en ligne ?>
 <h2>Articles en ligne</h2>
 
 
@@ -66,8 +67,8 @@
 </section>
 
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

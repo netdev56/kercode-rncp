@@ -56,9 +56,7 @@ class FrontController{
     // CONTACTEZ-NOUS
     // Page Contactez-Nous !
     function contactezNous(){
-
-    require 'app/views/front/contactezNous.php';
-
+        require 'app/views/front/contactezNous.php';
     }
 
 
@@ -80,6 +78,10 @@ class FrontController{
         header('Location: ./');      
     }
 
+    // Page Politique de confidentialité
+    function cookie(){
+        require 'app/views/front/cookie.php';
+    }
 
 
     // PAGE ERREUR
@@ -106,11 +108,6 @@ class FrontController{
     // PAGE 404
     function p404(){
         require 'app/views/front/404.php';
-    }
-
-    // PAGE COOKIE
-    function cookie(){
-        require 'app/views/front/cookie.php';
     }
 
 

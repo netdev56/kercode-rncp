@@ -1,8 +1,9 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <section class="taille_1170 bloc_gestions">
 
+<?php // Formulaire pour ajouter un utilisateur ?>
 <h1>Ajouter un utilisateur</h1>
 
 <form action="administration.php?action=createUserManagement" method="POST">
@@ -45,8 +46,8 @@
 
 
 
+<?php // Utilisateurs en ligne ?>
 <h2>Tous les utilisateurs :</h2>
-
 
 <div class="style_gestions">
 
@@ -74,16 +75,14 @@ foreach($allUser as $allUsers){
 </div>
 
 
-<?php 
-} 
-?>
+<?php } ?>
 
 </div>
 
 </section>
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

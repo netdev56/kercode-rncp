@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
 
-    <!-- Feuille de style CSS  -->
+    <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
 
     <title>Tableau de bord - Administration - Gîte La Cave</title>
 </head>
 
 <body>
-
-        <!-- Menu  -->
+        <?php // Menu ?>
         <header id="navbar_haut" class="nav_haut">
 
             <button><a href="administration.php?action=dashboard&id=<?= $_SESSION['id'] ?>">Dashboard</a></button>
@@ -60,19 +59,18 @@
 
         
         <main class="back_responsive">
-            <!-- Injection du contenu -->
+            <?php // Injection du contenu ?>
             <?= $content ?>
         </main>
 
 
-        <footer class="back_responsive footer_position">
-            <!-- Copyright by Gîte - La Cave -->
+        <footer>
         </footer>
     
 
     </section>
     
-<!-- Script JS pour le menu accordéon -->
+<?php // Script JS pour le menu accordéon ?>
 <script type="text/javascript" src="app/public/back/js/menuBack.js"></script>
 
 </body>

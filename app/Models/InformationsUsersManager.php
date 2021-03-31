@@ -3,13 +3,6 @@
 namespace Project\Models;
 
 class InformationsUsersManager extends Manager{
-    ///////FRONT
-
-
-
-
-
-
 
     ///////BACK
 
@@ -45,12 +38,12 @@ class InformationsUsersManager extends Manager{
     // Supprimer le compte utilisateur
     public function deletUserInfos($id){
         $bdd = $this->bdConnect();
+        
         $req = $bdd->prepare("DELETE FROM users WHERE id = ?");
         $req->execute(array($id));
 
         return $req;
     }
-
 
 
 

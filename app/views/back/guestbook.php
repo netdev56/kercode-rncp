@@ -1,8 +1,9 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <section class="taille_1170 bloc_gestions">
 
+<?php // Formulaire pour ajouter un commentaire ?>
 <h1>Ajouter un commentaire</h1>
 
 <form action="administration.php?action=createComments&iduser=<?= $_SESSION['id'] ?>" method="post">
@@ -22,15 +23,13 @@
 
 
 
-
-
-
+<?php // Commentaires en ligne ?>
 <h2>Commentaires du livre d'or</h2>
 
 <div class="style_gestions">
 
-<!-- Début de la condition du ROLE -->
-<!-- ROLE ADMIN-->
+<?php // Début de la condition du ROLE ?>
+<?php // ROLE ADMIN ?>
 <?php if($_SESSION['roleusers'] == 'admin'){ ?>
 
 <?php foreach($allGuestbookCommentsAdmin as $allComments){ ?>
@@ -52,8 +51,7 @@
 
 <?php } ?>
 
-
-<!-- ROLE USER-->
+<?php // ROLE USER ?>
 <?php }else{ ?>
 
 <?php foreach($allGuestbookComment as $allComments){ ?>
@@ -76,16 +74,15 @@
 
 <?php } ?>
 
-
-<!-- Fin de la condition du ROLE -->
+<?php // Fin de la condition ?>
 <?php } ?>
 
 </div>
 
 </section>
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>

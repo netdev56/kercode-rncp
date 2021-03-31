@@ -1,8 +1,9 @@
-<!-- Inject le header - contenu du tampon de sortie -->
+<?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
 <section class="taille_1170 bloc_gestions">
 
+<?php // Formulaire pour ajouter un administrateur ?>
 <h1>Ajouter un administrateur</h1>
 
 <form action="administration.php?action=createAdminManagement" method="POST">
@@ -46,9 +47,8 @@
 
 
 
+<?php // Administrateurs en ligne ?>
 <h2>Tous les administrateurs :</h2>
-
-
 
 <div class="style_gestions">
 
@@ -75,16 +75,14 @@ foreach($allAdmin as $allAdmins){
 
 
 
-<?php 
-} 
-?>
+<?php } ?>
 
 </div>
 
 </section>
 
-<!-- termine la session de temporisation -->
+<?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
 
-<!-- Inject le template -->
+<?php // Inject le template ?>
 <?php require 'templates/template.php'; ?>
