@@ -135,7 +135,7 @@
 <?php } ?>
 
 <?php // Script JS pour le menu ?>
-<script type="text/javascript" src="app/public/front/js/menuFront.js"></script>
+<script src="app/public/front/js/menuFront.js"></script>
 
 </body>
 </html>
