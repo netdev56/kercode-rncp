@@ -1,7 +1,7 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-<?php // Slide/ ?>
+<?php // Slide ?>
 <section class="slides">
 
     <div class="slides-item">

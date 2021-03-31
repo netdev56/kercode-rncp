@@ -71,7 +71,7 @@
     </section>
     
 <?php // Script JS pour le menu accordéon ?>
-<script type="text/javascript" src="app/public/back/js/menuBack.js"></script>
+<script src="app/public/back/js/menuBack.js"></script>
 
 </body>
 

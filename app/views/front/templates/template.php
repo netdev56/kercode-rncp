@@ -49,8 +49,6 @@
         }
 
     ?>
-    
-    <meta property=”og:locale” content=”fr_FR” />
 
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/front/css/style.css">
@@ -88,7 +86,7 @@
 
         <nav class="menu_nav">
             <div class="btn_menu">
-                <i class="close-btn"><img src="app\public\front\images\menu\fermer_nav.svg" alt="Fermer"></i>
+                <i class="close-btn"><img src="app/public/front/images/menu/fermer_nav.svg" alt="Fermer"></i>
             </div>
             
                 <a href="/">Accueil</a>
@@ -101,7 +99,7 @@
         </nav>
 
             <div class="btn_menu">
-                <i class="menu-btn"><img src="app\public\front\images\menu\bars-menu.svg" alt="Menu"></i>
+                <i class="menu-btn"><img src="app/public/front/images/menu/bars-menu.svg" alt="Menu"></i>
             </div>
             
         
