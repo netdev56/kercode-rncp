@@ -28,7 +28,7 @@ class BackController{
         if($pseudoExist){
             echo 'Ce pseudo existe déjà';
         } else if($emailExist){
-            echo 'cette adresse email existe déjà';
+            echo 'Cette adresse email existe déjà';
         } else{
             $user = $createUserManager->createUser($pseudo, $lastname, $firstname, $mail, $pass);
             header('Location: administration.php?action=connexionAdministration');
@@ -230,6 +230,7 @@ class BackController{
     function editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email, $pass){
         $editinfosusers = new \Project\Models\InformationsUsersManager();
         $editinfos = $editinfosusers->editinfosuser($id_user, $pseudo, $lastname, $firstname, $email, $pass);
+        $_SESSION["firstname"] = $firstname;
 
         header("Location: administration.php?action=editInfosUsers&id=$id_user");
     }
