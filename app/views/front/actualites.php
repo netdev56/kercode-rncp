@@ -2,10 +2,10 @@
 <?php ob_start(); ?>
 
     <section class="taille_1170 bloc_titre_general">
-        <h1>Retrouvez toute l'actualité !</h1>
-    </section>
+        <h1 class="marge_h1">Retrouvez toute l'actualité !</h1>
     
-    <article class="taille_1170 bloc_articles_actus">
+    
+    <article class="bloc_articles_actus">
 
         <?php foreach($allArticles as $allArticle){ ?>
 
@@ -18,12 +18,19 @@
                     <p><?= nl2br($allArticle['description_articles']) ?>...</p>
                 </div>
 
-                <a href="index.php?action=actualitesSingle&id=<?= $allArticle['id'] ?>" title="<?= $allArticle['title'] ?>"><button class="card_actus_btn">+ d'infos</button></a>
+                <!-- <a href="index.php?action=actualitesSingle&id=<?= $allArticle['id'] ?>" title="<?= $allArticle['title'] ?>"><button class="card_actus_btn">+ d'infos</button></a> -->
+
+                <div class="card_actus_btn">
+                    <a href="index.php?action=actualitesSingle&id=<?= $allArticle['id'] ?>" title="<?= $allArticle['title'] ?>">+ d'infos</a>
+                </div>
+
+
             </div>
 
         <?php } ?>
 
     </article>
+    </section>
 
 <?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>

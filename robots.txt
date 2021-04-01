@@ -18,4 +18,4 @@ Disallow:/administration.php?action=editInfosUsers
 Disallow:/administration.php?action=contactMessaging
 Disallow:/administration.php?action=registrationFormUser
 Disallow:/administration.php?action=connexionAdministration
-Sitemap:/sitemap.xml
+Sitemap: https://kercode-rncp.wecoding.fr/sitemap.xml

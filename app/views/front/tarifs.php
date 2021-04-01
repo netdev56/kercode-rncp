@@ -3,11 +3,7 @@
 
 
     <section class="taille_1170 bloc_titre_general">
-        <h1 class="marge_h1_tarif">Tarifs de location</h1>
-    </section>
-
-    
-    <section class="taille_1170">
+        <h1 class="marge_h1">Tarifs de location</h1>
 
 <?php // Menu accordéon ?>
 <button class="accordion">Tarifs automne-hiver 2020/2021</button>

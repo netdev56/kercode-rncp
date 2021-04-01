@@ -4,12 +4,12 @@
 
 
 <section class="taille_1170 bloc_titre_general">
-        <h1>Contactez-Nous !</h1>
-    </section>
+        <h1 class="marge_h1">Contactez-Nous !</h1>
+    
 
     
 
-    <section class="taille_1170 bloc_formulaire_contact">
+    <div class="bloc_formulaire_contact">
 
 <?php // Image de gauche ?>
 <div class="bloc_contact_gauche"></div>
@@ -54,6 +54,7 @@
 
 
 </div>
+    </div>
 
     </section>
 
