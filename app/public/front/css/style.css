@@ -712,21 +712,6 @@ header .btn_menu{
     overflow: hidden;
 }
 
-/* .card_actus_btn{
-    bottom: 0;
-    background-color: var(--fd-menu-beige);
-    height: 50px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 100%;
-    border: 0;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: var(--blanc-color);
-    cursor: pointer;
-    font-family: cinzel; 
-} */
-
 .card_actus_btn{
     background-color: var(--fd-menu-beige);
     height: 50px;
@@ -826,6 +811,10 @@ header .btn_menu{
 .post_livre span{
     font-size: 1.3rem;
     color: var(--fd-menu-beige);
+}
+
+.marge_livredor{
+    padding-bottom: 50px;
 }
 
 

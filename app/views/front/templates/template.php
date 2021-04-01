@@ -9,7 +9,7 @@
     <?php $seoDescription = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         if(strpos($seoDescription, 'legite') == true){
-            echo '<meta Description="Louer un gite en Bretagne, notre gîte est situé à Pluneret proche de Quiberon, Vannes, Sainte Anne d\'Auray, Carnac dans le Morbihan">';
+            echo '<meta name="Description" content="Louer un gite en Bretagne, notre gîte est situé à Pluneret proche de Quiberon, Vannes, Sainte Anne d\'Auray, Carnac dans le Morbihan">';
         
         }elseif(strpos($seoDescription, 'tarifs') == true){
             echo '<meta name="Description" content="Gîte La Cave est un gite à louer sur Pluneret dans le Morbihan en Bretagne. Location à Pluneret proche de Quiberon, Vannes, Auray, Carnac, Trinité sur Mer">';

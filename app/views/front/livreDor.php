@@ -6,11 +6,11 @@
 
         <p>Merci à tous ceux qui ont gentillement pris quelques minutes pendant leurs vacances,
             <br>pour nous laisser un petit mot sur leurs impressions, émotions et sentiments.</p>
-        <p>Au plaisir de vous accueillir à nouveau dans notre belle région !</p>
-    </section>
+        <p class="marge_livredor">Au plaisir de vous accueillir à nouveau dans notre belle région !</p>
+    
 
 
-    <article class="taille_1170 bloc_commentaires_livre">
+    <div class="taille_1170 bloc_commentaires_livre">
 
         <?php foreach($allGuestbookComments as $allGuestbook){ ?>
 
@@ -24,7 +24,8 @@
 
         <?php } ?>
 
-        </article>
+        </div>
+        </section>
 
 
 <?php // termine la session de temporisation ?>
