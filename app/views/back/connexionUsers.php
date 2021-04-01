@@ -9,6 +9,8 @@
 
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
+
+    <title>Gîte La Cave - Connexion</title>
 </head>
 
 <body class="body_connexion">
@@ -16,7 +18,6 @@
 <section class="bloc_connexion">
     <h1>Se connecter</h1>
 
-    <div>
         <form action="administration.php?action=connexionUser" method="POST">
             <div class="connexion_input">
                 <input type="email" name="mail" id="mail" placeholder="Email">

@@ -9,13 +9,14 @@
 
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
+
+    <title>Gîte La Cave - Inscription</title>
 </head>
 <body class="body_connexion">
 
 <section class="bloc_connexion">
     <h1>Inscription</h1>
 
-    <div>
         <form action="administration.php?action=createUsers" method="POST">
             
             <div class="connexion_input">
