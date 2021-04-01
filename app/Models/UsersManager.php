@@ -17,6 +17,28 @@ class UsersManager extends Manager{
 
     }
 
+    
+    // Création des comptes utilisateurs - Contrôle si le pseudo existe déjà
+    public function voirPseudoExist($pseudo){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT pseudo FROM users WHERE pseudo = ?");
+        $req->execute(array($pseudo));
+
+        return $req;
+    }
+
+
+    // Création des comptes utilisateurs - Contrôle si l'email existe déjà
+    public function voirEmailExist($email){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT email FROM users WHERE email = ?");
+        $req->execute(array($email));
+
+        return $req;
+    }
+
 
     // Récupération du mail pour le formulaire de connexion
     public function recupInfosConnexion($mail){
@@ -27,6 +49,9 @@ class UsersManager extends Manager{
 
         return $reqInfos;
     }
+
+
+
 
     
 

@@ -3,7 +3,7 @@
 
 
     <section class="taille_1170 bloc_titre_general">
-        <h1>Tarifs de location</h1>
+        <h1 class="marge_h1_tarif">Tarifs de location</h1>
     </section>
 
     

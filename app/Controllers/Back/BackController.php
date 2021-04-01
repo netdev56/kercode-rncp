@@ -19,9 +19,20 @@ class BackController{
     // Formulaire d'inscription Utilisateur
     function createUser($pseudo, $lastname, $firstname, $mail, $pass){
         $createUserManager = new \Project\Models\UsersManager();
-        $user = $createUserManager->createUser($pseudo, $lastname, $firstname, $mail, $pass);
 
-        header('Location: administration.php?action=connexionAdministration');
+        $pseudoModel = $createUserManager->voirPseudoExist($pseudo);
+        $emailModel = $createUserManager->voirEmailExist($mail);
+        $pseudoExist = $pseudoModel->fetch();
+        $emailExist = $emailModel->fetch();
+        
+        if($pseudoExist){
+            echo 'Ce pseudo existe déjà';
+        } else if($emailExist){
+            echo 'cette adresse email existe déjà';
+        } else{
+            $user = $createUserManager->createUser($pseudo, $lastname, $firstname, $mail, $pass);
+            header('Location: administration.php?action=connexionAdministration');
+        }
     }
 
 

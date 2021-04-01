@@ -1,5 +1,7 @@
 /vendor/
 htaccess
 .htaccess
+cpanel.yml
+.cpanel.yml
 /app/Models/Manager.php
 /bdd/

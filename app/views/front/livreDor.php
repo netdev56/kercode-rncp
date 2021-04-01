@@ -10,7 +10,7 @@
     </section>
 
 
-    <section class="taille_1170 bloc_commentaires_livre">
+    <article class="taille_1170 bloc_commentaires_livre">
 
         <?php foreach($allGuestbookComments as $allGuestbook){ ?>
 
@@ -24,7 +24,7 @@
 
         <?php } ?>
 
-    </section>
+        </article>
 
 
 <?php // termine la session de temporisation ?>
