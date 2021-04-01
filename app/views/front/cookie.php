@@ -67,7 +67,7 @@ l'Éditeur</a></p>
 <h2 id="6identification">6- Collecte des données d'identification</h2>
 
     <p><b>Utilisation de l'identifiant de l’utilisateur uniquement pour l’accès aux services</b></p>
-    </p>Nous utilisons vos identifiants électroniques seulement pour et pendant l'exécution du contrat.</p>
+    <p>Nous utilisons vos identifiants électroniques seulement pour et pendant l'exécution du contrat.</p>
 
 <h2 id="7terminal">7- Collecte des données du terminal</h2>
 
