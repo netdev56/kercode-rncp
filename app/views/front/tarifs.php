@@ -185,7 +185,7 @@
 </section>
 
 <?php // Script JS pour le menu accordéon ?>
-<script type="text/javascript" src="app/public/front/js/menuaccordeon.js"></script>
+<script src="app/public/front/js/menuaccordeon.js"></script>
 
 <?php // termine la session de temporisation ?>
 <?php $content = ob_get_clean(); ?>
