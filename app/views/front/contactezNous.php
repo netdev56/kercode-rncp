@@ -6,20 +6,49 @@
 <section class="taille_1170 bloc_titre_general">
         <h1 class="marge_h1">Contactez-Nous !</h1>
 
-<?php if ($errors && $errors["email_invalide"]){ ?> 
-            <span class="error">
-                <?= $errors["email_invalide"]; ?>
-            </span>
-            <?php } ?> 
-            
-            
- <?php if ($errors && $errors["email_requis"]){ ?>         
-            <span class="error">
-                <?= $errors["email_requis"]; ?>
-            </span>
-    <?php } ?>
 
-    
+<?php // MESSAGE D'ERREUR ?>
+<?php //Nom ?>        
+<?php if (isset($errors["lastname_requis"])){ ?>      
+    <p class="bloc_erreurs">            
+        <?= $errors["lastname_requis"]; ?>  
+    </p>
+<?php } ?>
+
+<?php //Email ?>  
+<?php if (isset($errors["email_invalide"])){ ?>  
+    <p class="bloc_erreurs">                     
+        <?= $errors["email_invalide"]; ?>  
+    </p>
+<?php } ?>
+
+<?php if (isset($errors["email_requis"])){ ?>  
+    <p class="bloc_erreurs">                  
+        <?= $errors["email_requis"]; ?>  
+    </p>
+<?php } ?>
+
+<?php //Téléphone ?>        
+<?php if (isset($errors["telephone_requis"])){ ?>   
+    <p class="bloc_erreurs">               
+        <?= $errors["telephone_requis"]; ?> 
+    </p> 
+<?php } ?>
+
+<?php //Message ?>         
+<?php if (isset($errors["message_requis"])){ ?>   
+    <p class="bloc_erreurs">               
+        <?= $errors["message_requis"]; ?>  
+    </p>
+<?php } ?>
+
+<?php //RGPD ?>        
+<?php if (isset($errors["rgpdContacform_requis"])){ ?>  
+    <p class="bloc_erreurs">                
+        <?= $errors["rgpdContacform_requis"]; ?>  
+    </p>
+<?php } ?>
+
 
     <div class="bloc_formulaire_contact">
 

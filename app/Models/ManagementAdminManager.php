@@ -69,6 +69,28 @@ class ManagementAdminManager extends Manager{
     }
 
 
+    // Ajouter un compte ADMIN - Contrôle si le pseudo existe déjà
+    public function voirPseudoExistAdmin($pseudo){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT pseudo FROM users WHERE pseudo = ?");
+        $req->execute(array($pseudo));
+
+        return $req;
+    }
+
+
+    // Ajouter un compte ADMIN - Contrôle si l'email existe déjà
+    public function voirEmailExistAdmin($email){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT email FROM users WHERE email = ?");
+        $req->execute(array($email));
+
+        return $req;
+    }
+
+
     // Page : éditer mot de passe d'un compte ADMIN
     public function managementAdminEditMdpEdition($id_user){
         $bdd = $this->bdConnect();

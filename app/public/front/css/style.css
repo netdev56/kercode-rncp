@@ -81,6 +81,21 @@ body{
     margin-bottom: 50px;
 }
 
+.bloc_erreurs{
+    color: var(--blanc-color);
+    text-align: center;
+    /* font-weight: bold; */
+    padding: 10px 0;
+    /* font-size: 0.8rem; */
+    text-transform: uppercase;
+    background-color: RGBA(255,59,10,0.5);
+    /* margin-bottom: 20px; */
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
 
 
 
@@ -919,22 +934,6 @@ header .btn_menu{
 .icones_telephone_contact{
     width: 23px;
     height: auto;
-}
-
-.erreur_contact{
-    color: var(--blanc-color);
-    text-align: center;
-    font-weight: bold;
-    padding: 20px 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    background-color: RGBA(255,59,10,0.5);
-    margin-bottom: 20px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
 }
 
 

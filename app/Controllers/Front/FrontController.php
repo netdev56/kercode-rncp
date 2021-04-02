@@ -70,7 +70,7 @@ class FrontController{
         $errors=array();
 
 
-
+        // Email
         if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) == false){
 
             $errors["email_invalide"] = "L'email n'est pas correct";
@@ -78,6 +78,26 @@ class FrontController{
         }if(empty($email)){
 
             $errors["email_requis"] = "Un email est requis";
+
+        // Nom
+        }if(empty($lastname)){
+
+            $errors["lastname_requis"] = "Un nom est requis";
+
+        // Téléphone
+        }if(empty($telephone)){
+
+            $errors["telephone_requis"] = "Un numéro de télephone est requis";
+
+        // Message
+        }if(empty($message)){
+
+            $errors["message_requis"] = "Un message est requis";
+
+        // RGPD
+        }if(empty($rgpdContacform)){
+
+            $errors["rgpdContacform_requis"] = "Cocher la case RGPD pour envoyer le message";
 
         }if(empty($errors)){
             
@@ -89,8 +109,6 @@ class FrontController{
             $this->contactezNous($errors);
         }
     }
-
-
 
 
     // // Page Contactez-Nous ! - Envoi du formulaire

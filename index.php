@@ -71,7 +71,7 @@ try{
 
             // // Vérifie que les champs sont remplis
             // if(!empty($lastname) && (!empty($email) && (!empty($telephone) && (!empty($message) && (!empty($rgpdContacform)))))){
-                $frontController->contactForms($lastname, $email, $telephone, $message, $rgpdContacform);
+            $frontController->contactForms($lastname, $email, $telephone, $message, $rgpdContacform);
             // }else{
             //     header('Location: index.php?action=erreurForm');
             // }

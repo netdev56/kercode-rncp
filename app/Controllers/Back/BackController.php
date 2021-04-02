@@ -298,9 +298,20 @@ class BackController{
     // Ajouter un compte ADMIN
     function createAdminsManagement($pseudo, $lastname, $firstname, $mail, $pass){
         $AdminManagement = new \Project\Models\ManagementAdminManager();
-        $createAdminManag = $AdminManagement->createManagementAdmins($pseudo, $lastname, $firstname, $mail, $pass);
 
-        header("Location: administration.php?action=managementAdmin");
+        $pseudoModelAdmin = $AdminManagement->voirPseudoExistAdmin($pseudo);
+        $emailModelAdmin = $AdminManagement->voirEmailExistAdmin($mail);
+        $pseudoExistAdmin = $pseudoModelAdmin->fetch();
+        $emailExistAdmin = $emailModelAdmin->fetch();
+
+        if($pseudoExistAdmin){
+            echo 'Ce pseudo existe déjà';
+        } else if($emailExistAdmin){
+            echo 'Cette adresse email existe déjà';
+        } else{
+            $createAdminManag = $AdminManagement->createManagementAdmins($pseudo, $lastname, $firstname, $mail, $pass);
+            header("Location: administration.php?action=managementAdmin");
+        }
     }
 
     // Page : éditer mot de passe d'un compte ADMIN
@@ -357,9 +368,20 @@ class BackController{
     // Ajouter un compte USER
     function createUsersManagement($pseudo, $lastname, $firstname, $mail, $pass){
         $UserManagement = new \Project\Models\ManagementUserManager();
-        $createUserManag = $UserManagement->createManagementUsers($pseudo, $lastname, $firstname, $mail, $pass);
 
-        header('Location: administration.php?action=managementUsers');
+        $pseudoModelUser = $UserManagement->voirPseudoExistUser($pseudo);
+        $emailModelUser = $UserManagement->voirEmailExistUser($mail);
+        $pseudoExistUser = $pseudoModelUser->fetch();
+        $emailExistUser = $emailModelUser->fetch();
+
+        if($pseudoExistUser){
+            echo 'Ce pseudo existe déjà';
+        } else if($emailExistUser){
+            echo 'Cette adresse email existe déjà';
+        } else{
+            $createUserManag = $UserManagement->createManagementUsers($pseudo, $lastname, $firstname, $mail, $pass);
+            header('Location: administration.php?action=managementUsers');
+        }
     }
 
     // Page : éditer mot de passe d'un compte USER

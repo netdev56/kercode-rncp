@@ -70,6 +70,28 @@ class ManagementUserManager extends Manager{
     }
 
 
+    // Ajouter un compte USER - Contrôle si le pseudo existe déjà
+    public function voirPseudoExistUser($pseudo){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT pseudo FROM users WHERE pseudo = ?");
+        $req->execute(array($pseudo));
+
+        return $req;
+    }
+
+
+    // Ajouter un compte USER - Contrôle si l'email existe déjà
+    public function voirEmailExistUser($email){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT email FROM users WHERE email = ?");
+        $req->execute(array($email));
+
+        return $req;
+    }
+
+
     // Page : éditer mot de passe d'un compte USER
     public function allManagementUserMdp($id_users){
         $bdd = $this->bdConnect();
