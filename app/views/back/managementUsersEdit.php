@@ -30,13 +30,17 @@
                 </tr>
 
                 <tr>
-                    <td><label for="password">Mot de passe :</label></td>
-                    <td><input type="password" name="pass" id="pass" placeholder="*********"></td>
+                    <td><label>Votre mot de passe :</label></td>
+                    <td class="informationsusers_mdp"><a href="administration.php?action=managementUsersEditMdp&id=<?= $managementEditUser['id'] ?>" title="Modifier votre mot de passe">Cliquez ici</a></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><p></p></td>
                 </tr>
 
                 <tr>
                     <td><label>Changer le role :</label></td>
-
                     <td><select name="roleusers">
                             <option value="admin">Administrateur</option>
                             <option value="user" selected>Utilisateur</option>
@@ -45,8 +49,8 @@
                 </tr>
 
                 <tr>
-                    <td><label for="dateInscription">Date d'inscription : </label></td>
-                    <td class="informationsusers_date"><?= $managementEditUser['dateinscription'] ?></td>
+                    <td class="informationsusers_date"><label>Date d'inscription : </label></td>
+                    <td class="informationsusers_date"><?= $managementEditUser['dateUserManagerEdit'] ?></td>
                 </tr>
 
                 <tr>

@@ -63,7 +63,7 @@ foreach($allAdmin as $allAdmins){
     <p><span>Nom :</span> <?=$allAdmins['lastname']?></p>
     <p><span>Prénom :</span> <?=$allAdmins['firstname']?></p>
     <p><span>Email :</span> <?=$allAdmins['email']?></p>
-    <p><span>Date d'inscription :</span> <?=$allAdmins['dateinscription']?></p>
+    <p><span>Date d'inscription :</span> <?=$allAdmins['dateAdminManager']?></p>
 
 <div class="btn_gestions">
     <button class="btn_modifier_informationsusers"><a href="administration.php?action=adminEditionManagement&id=<?= $allAdmins['id'] ?>">Modifier</a></button>

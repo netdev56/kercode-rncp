@@ -69,12 +69,12 @@ try{
             $message = htmlspecialchars($_POST['message_contactform']);
             $rgpdContacform = htmlspecialchars($_POST['rgpd_contactform']);
 
-            // Vérifie que les champs sont remplis
-            if(!empty($lastname) && (!empty($email) && (!empty($telephone) && (!empty($message) && (!empty($rgpdContacform)))))){
+            // // Vérifie que les champs sont remplis
+            // if(!empty($lastname) && (!empty($email) && (!empty($telephone) && (!empty($message) && (!empty($rgpdContacform)))))){
                 $frontController->contactForms($lastname, $email, $telephone, $message, $rgpdContacform);
-            }else{
-                header('Location: index.php?action=erreurForm');
-            }
+            // }else{
+            //     header('Location: index.php?action=erreurForm');
+            // }
 
         }
 

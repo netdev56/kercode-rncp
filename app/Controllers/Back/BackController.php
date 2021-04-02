@@ -243,6 +243,23 @@ class BackController{
         require 'app/views/front/accueil.php';
     }
 
+    // Page : modifier le mot de passe
+    function informationsUsersMdp($id_user){
+        $informationsUserMdpEdition = new \Project\Models\InformationsUsersManager();
+        $informationsUsersMdpAdmin = $informationsUserMdpEdition->informationsUsersMdpEdition($id_user);
+
+        require 'app/views/back/informationsUsersMdp.php';
+    }
+
+    // Editer le mot de passe
+    function editUsersInfosMdp($id_user, $pass){
+        $editinfosusersMdp = new \Project\Models\InformationsUsersManager();
+        $editinfosMdp = $editinfosusersMdp->editinfosuserMdp($id_user, $pass);
+
+        header("Location: administration.php?action=editInfosUsers&id=$id_user");
+    }
+
+
 
 
     // GESTION ADMINISTRATEURS
@@ -284,6 +301,22 @@ class BackController{
         $createAdminManag = $AdminManagement->createManagementAdmins($pseudo, $lastname, $firstname, $mail, $pass);
 
         header("Location: administration.php?action=managementAdmin");
+    }
+
+    // Page : éditer mot de passe d'un compte ADMIN
+    function managementAdminEditMdp($id_user){
+        $managementAdminEditionMdp = new \Project\Models\ManagementAdminManager();
+        $managementEditionAdminMdp = $managementAdminEditionMdp->managementAdminEditMdpEdition($id_user);
+        
+        require 'app/views/back/managementAdminEditMdp.php';
+    }
+
+    // Editer mot de passe d'un compte ADMIN
+    function editAdminsManagementMdp($id_users, $pass){
+        $managementAdminsEditionMdp = new \Project\Models\ManagementAdminManager();
+        $managementEditionAdminsMdp = $managementAdminsEditionMdp->adminsManagementEditionMdp($id_users, $pass);
+
+        header("Location: administration.php?action=managementAdmin&id=$id_users");
     }
     
 
@@ -327,6 +360,22 @@ class BackController{
         $createUserManag = $UserManagement->createManagementUsers($pseudo, $lastname, $firstname, $mail, $pass);
 
         header('Location: administration.php?action=managementUsers');
+    }
+
+    // Page : éditer mot de passe d'un compte USER
+    function managementUsersAllMdp($id_users){
+        $UsersMdp = new \Project\Models\ManagementUserManager();
+        $allUserMdp = $UsersMdp->allManagementUserMdp($id_users);
+
+        require 'app/views/back/managementUsersEditMdp.php';
+    }
+
+    // Editer mot de passe d'un compte USER
+    function editUsersManagementMdp($id_users, $pass){
+        $managementUsersEditionMdp = new \Project\Models\ManagementUserManager();
+        $managementEditionUsersMdp = $managementUsersEditionMdp->usersManagementEditionMdp($id_users, $pass);
+        
+        header("Location: administration.php?action=managementUsers&id=$id_users");
     }
         
 

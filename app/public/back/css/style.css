@@ -518,6 +518,10 @@ header .icon_menu{
 }
 
 .informationsusers_date{
+    padding-top: 15px;
+}
+
+.informationsusers_mdp{
     padding: 10px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -525,9 +529,21 @@ header .icon_menu{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border: none;
-    background-color: var(--blanc-color);
-    margin-bottom: 15px;
+    background-color: var(--gen_beige-clair-color);
+    margin-bottom: 30px;
     font-size: 0.8rem;
+    text-align: center;
+}
+
+.informationsusers_mdp a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--noir-color);
+}
+
+.informationsusers_mdp a:hover{
+    color: var(--blanc-color);
 }
 
 .btn_informationsusers{

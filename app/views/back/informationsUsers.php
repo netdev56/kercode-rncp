@@ -32,12 +32,12 @@
 
                 <tr>
                     <td><label for="pass">Votre mot de passe :</label></td>
-                    <td><input type="password" name="pass" id="pass" placeholder="*********"></td>
+                    <td class="informationsusers_mdp"><a href="administration.php?action=informationsUsersMdp&id=<?= $infosUserAdmin['id'] ?>" title="Modifier votre mot de passe">Cliquez ici</a></td>
                 </tr>
 
                 <tr>
-                    <td><label for="dateInscription">Date d'inscription : </label></td>
-                    <td class="informationsusers_date" id="dateInscription"><?= $infosUserAdmin['dateinscription'] ?></td>
+                    <td class="informationsusers_date"><label>Date d'inscription : </label></td>
+                    <td class="informationsusers_date"><?= $infosUserAdmin['dateInscription'] ?></td>
                 </tr>
 
                 <tr>

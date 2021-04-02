@@ -64,7 +64,7 @@ foreach($allUser as $allUsers){
     <p><span>Nom :</span> <?=$allUsers['lastname']?></p>
     <p><span>Prénom :</span> <?=$allUsers['firstname']?></p>
     <p><span>Email :</span> <?=$allUsers['email']?></p>
-    <p><span>Date d'inscription :</span> <?=$allUsers['dateinscription']?></p>
+    <p><span>Date d'inscription :</span> <?=$allUsers['dateUserManager']?></p>
 
 <div class="btn_gestions">
     <button class="btn_modifier_informationsusers"><a href="administration.php?action=userEditionManagement&id=<?= $allUsers['id'] ?>">Modifier</a></button>

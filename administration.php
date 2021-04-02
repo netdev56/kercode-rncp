@@ -202,6 +202,31 @@ if(isset($_SESSION['id'])){
         }
 
 
+        // Page : modifier le mot de passe
+        elseif($_GET['action'] == 'informationsUsersMdp'){
+            $id_user = $_GET['id'];
+            $backController->informationsUsersMdp($id_user);
+        }
+
+
+        // Editer le mot de passe
+        elseif($_GET['action'] == 'editInformationsUsersMdp'){ 
+            $id_user = $_GET['id'];
+            $pass = htmlspecialchars($_POST['pass']);
+
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
+            // Vérifie que le champ soit rempli
+            if(!empty($pass)){
+                $backController->editUsersInfosMdp($id_user, $pass);
+            }else{
+                throw new Exception('Le champ n\'est pas remplis');
+            }
+
+        }
+
+
 
 
         // GESTION ADMINISTRATEURS
@@ -269,6 +294,31 @@ if(isset($_SESSION['id'])){
                 throw new Exception('Renseigner vos informations');
             }
             
+        }
+
+
+        // Page : éditer mot de passe d'un compte ADMIN
+        elseif($_GET['action'] == 'managementAdminEditMdp'){
+            $id_user = $_GET['id'];
+            $backController->managementAdminEditMdp($id_user);
+        }
+
+
+        // Editer mot de passe d'un compte ADMIN
+        elseif($_GET['action'] == 'editManagementAdminMdp'){ 
+            $id_users = $_GET['id'];
+            $pass = htmlspecialchars($_POST['pass']);
+
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
+            // Vérifie que le champ soit rempli
+            if(!empty($pass)){
+                $backController->editAdminsManagementMdp($id_users, $pass);
+            }else{
+                throw new Exception('Le champ n\'est pas remplis');
+            }
+
         }
         
 
@@ -339,6 +389,31 @@ if(isset($_SESSION['id'])){
                 throw new Exception('Renseigner vos informations');
             }
             
+        }
+
+
+        // Page : éditer mot de passe d'un compte USER
+        elseif($_GET['action'] == 'managementUsersEditMdp'){
+            $id_users = $_GET['id'];
+            $backController->managementUsersAllMdp($id_users);
+        }
+
+
+        // Editer mot de passe d'un compte USER
+        elseif($_GET['action'] == 'editManagementUserMdp'){ 
+            $id_users = $_GET['id'];
+            $pass = htmlspecialchars($_POST['pass']);
+
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
+            // Vérifie que le champ soit rempli
+            if(!empty($pass)){
+                $backController->editUsersManagementMdp($id_users, $pass);
+            }else{
+                throw new Exception('Le champ n\'est pas remplis');
+            }
+
         }
                 
 

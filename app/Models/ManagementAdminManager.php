@@ -10,7 +10,7 @@ class ManagementAdminManager extends Manager{
     public function allManagementAdmin($id_users){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->prepare("SELECT * FROM users WHERE roleusers = 'admin' ORDER BY id DESC");
+        $req = $bdd->prepare("SELECT *, DATE_FORMAT(dateinscription, '%d/%m/%Y') AS dateAdminManager FROM users WHERE roleusers = 'admin' ORDER BY id DESC");
         $req->execute(array($id_users));
 
         return $req;
@@ -32,7 +32,7 @@ class ManagementAdminManager extends Manager{
     public function adminManagementEdition($id_user){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->prepare("SELECT * FROM users WHERE id = ?");
+        $req = $bdd->prepare("SELECT *, DATE_FORMAT(dateinscription, '%d/%m/%Y') AS dateAdminManagerEdit FROM users WHERE id = ?");
         $req->execute(array($id_user));
 
         return $req;
@@ -66,6 +66,31 @@ class ManagementAdminManager extends Manager{
         $createAdminManagement->execute(array($pseudo, $lastname, $firstname, $mail, $pass));
 
         return $createAdminManagement;
+    }
+
+
+    // Page : éditer mot de passe d'un compte ADMIN
+    public function managementAdminEditMdpEdition($id_user){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("SELECT id, pass FROM users WHERE id = ?");
+        $req->execute(array($id_user));
+
+        return $req;
+    }
+
+
+    // Editer un compte ADMIN managementAdminEdit.php
+    public function adminsManagementEditionMdp($id_users, $pass){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->prepare("UPDATE users SET pass = :pass WHERE id = :id");
+        $req->execute([
+            'id' => $id_users,
+            'pass' => $pass
+        ]);
+
+        return $req;
     }
 
 

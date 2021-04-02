@@ -64,7 +64,7 @@ class FrontController{
     // Page Contactez-Nous ! - Envoi du formulaire
     function contactForms($lastname, $email, $telephone, $message, $rgpdContacform){
         $contactManager = new \Project\Models\ContactFormManager();
-
+        
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
         $errors=array();
@@ -80,6 +80,8 @@ class FrontController{
             $errors["email_requis"] = "Un email est requis";
 
         }if(empty($errors)){
+            
+            // header('Location: index.php?action=contactezNous');
 
             $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
             // require 'app/views/front/contactezNous.php';
@@ -87,6 +89,8 @@ class FrontController{
             $this->contactezNous($errors);
         }
     }
+
+
 
 
     // // Page Contactez-Nous ! - Envoi du formulaire
