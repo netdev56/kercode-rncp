@@ -1,5 +1,5 @@
 /vendor/
 htaccess
-.htaccess
-/app/Models/Manager.php
 /bdd/
+.env
+.env_prod
