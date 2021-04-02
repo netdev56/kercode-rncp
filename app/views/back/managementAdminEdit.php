@@ -31,7 +31,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="password">Mot de passe :</label></td>
+                    <td><label for="pass">Mot de passe :</label></td>
                     <td><input type="password" name="pass" id="pass" placeholder="*********"></td>
                 </tr>
 
@@ -46,7 +46,7 @@
 
                 <tr>
                     <td><label for="dateInscription">Date d'inscription : </label></td>
-                    <td class="informationsusers_date"><?= $managementEditAdmin['dateinscription'] ?></td>
+                    <td class="informationsusers_date" id="dateInscription" ><?= $managementEditAdmin['dateinscription'] ?></td>
                 </tr>
 
                 <tr>

@@ -55,7 +55,8 @@ class FrontController{
     
     // CONTACTEZ-NOUS
     // Page Contactez-Nous !
-    function contactezNous(){
+    function contactezNous($errors=array()){
+        $errors = $errors;
         require 'app/views/front/contactezNous.php';
     }
 
@@ -63,13 +64,41 @@ class FrontController{
     // Page Contactez-Nous ! - Envoi du formulaire
     function contactForms($lastname, $email, $telephone, $message, $rgpdContacform){
         $contactManager = new \Project\Models\ContactFormManager();
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+        $errors=array();
+
+
+
+        if(!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL) == false){
+
+            $errors["email_invalide"] = "L'email n'est pas correct";
+
+        }if(empty($email)){
+
+            $errors["email_requis"] = "Un email est requis";
+
+        }if(empty($errors)){
+
             $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
-            require 'app/views/front/contactezNous.php';
+            // require 'app/views/front/contactezNous.php';
         }else{
-            header('Location: index.php?action=erreurForm');
+            $this->contactezNous($errors);
         }
     }
+
+
+    // // Page Contactez-Nous ! - Envoi du formulaire
+    // function contactForms($lastname, $email, $telephone, $message, $rgpdContacform){
+    //     $contactManager = new \Project\Models\ContactFormManager();
+    //     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+    //         $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
+    //         require 'app/views/front/contactezNous.php';
+    //     }else{
+    //         header('Location: index.php?action=erreurForm');
+    //     }
+    // }
 
 
     // COOKIES

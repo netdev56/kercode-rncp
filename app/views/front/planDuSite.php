@@ -2,10 +2,7 @@
 <?php ob_start(); ?>
 
     <section class="taille_1170 bloc_titre_general">
-        <h1>Plan du site</h1>
-    </section>
-    
-    <section class="taille_1170">
+        <h1 class="marge_h1">Plan du site</h1>
 
         <div class="bloc_lien_planDuSite">
             <img src="/app/public/front/images/icones/chevron-gite-pluneret.svg" alt="Localisation du gîte La Cave" 
@@ -35,7 +32,7 @@
             <div class="bloc_lien_planDuSite bloc_lien_actus">
                 <img src="/app/public/front/images/icones/chevron-gite-pluneret.svg" alt="Localisation du gîte La Cave" 
         class="svg_planDuSite">
-                <p><a href="index.php?action=actualitesSingle&id=<?= $allArticlePlan['id'] ?>" title="<?= $allArticlePlan['title'] ?>"><?= $allArticlePlan['title'] ?></a></a></p>
+                <p><a href="index.php?action=actualitesSingle&id=<?= $allArticlePlan['id'] ?>" title="<?= $allArticlePlan['title'] ?>"><?= $allArticlePlan['title'] ?></a></p>
             </div>
         <?php } ?>
 

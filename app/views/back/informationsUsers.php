@@ -31,13 +31,13 @@
                 </tr>
 
                 <tr>
-                    <td><label for="password">Votre mot de passe :</label></td>
+                    <td><label for="pass">Votre mot de passe :</label></td>
                     <td><input type="password" name="pass" id="pass" placeholder="*********"></td>
                 </tr>
 
                 <tr>
                     <td><label for="dateInscription">Date d'inscription : </label></td>
-                    <td class="informationsusers_date"><?= $infosUserAdmin['dateinscription'] ?></td>
+                    <td class="informationsusers_date" id="dateInscription"><?= $infosUserAdmin['dateinscription'] ?></td>
                 </tr>
 
                 <tr>

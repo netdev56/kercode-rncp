@@ -29,7 +29,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="password">Mot de passe :</label></td>
+                    <td><label for="pass">Mot de passe :</label></td>
                     <td><input type="password" name="pass" id="pass" placeholder="Votre mot de passe"></td>
                 </tr>
 

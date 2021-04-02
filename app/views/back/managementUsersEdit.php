@@ -20,10 +20,6 @@
                     <td><input type="text" name="lastname" id="lastname" placeholder="Votre nom" value="<?= $managementEditUser['lastname'] ?>"></td>
                 </tr>
                 <tr>
-                    <td><label for="lastname">role :</label></td>
-                    <td><input type="text" name="role" id="lastname" placeholder="Votre nom" value="<?= $managementEditUser['roleusers'] ?>"></td>
-                </tr>
-                <tr>
                     <td><label for="firstname">Prénom :</label></td>
                     <td><input type="text" name="firstname" id="firstname" placeholder="Votre prénom" value="<?= $managementEditUser['firstname'] ?>"></td>
                 </tr>

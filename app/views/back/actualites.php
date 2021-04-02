@@ -32,7 +32,7 @@
 
 
 
-<article class="bloc_articles_actusadmin">
+<div class="bloc_articles_actusadmin">
 
         <?php foreach($allArticlesAdmin as $allArticleAdmin){ ?>
 
@@ -63,7 +63,7 @@
 
         <?php } ?>
 
-</article>
+        </div>
 </section>
 
 

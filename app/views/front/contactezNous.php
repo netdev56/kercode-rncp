@@ -5,7 +5,19 @@
 
 <section class="taille_1170 bloc_titre_general">
         <h1 class="marge_h1">Contactez-Nous !</h1>
-    
+
+<?php if ($errors && $errors["email_invalide"]){ ?> 
+            <span class="error">
+                <?= $errors["email_invalide"]; ?>
+            </span>
+            <?php } ?> 
+            
+            
+ <?php if ($errors && $errors["email_requis"]){ ?>         
+            <span class="error">
+                <?= $errors["email_requis"]; ?>
+            </span>
+    <?php } ?>
 
     
 
@@ -37,7 +49,7 @@
         <input type="text" id="lastname_contactform" name="lastname_contactform" class="champ_contact" placeholder="nom">
     
         <label for="email_contactform">Votre email : </label>
-        <input type="email" id="email_contactform" name="email_contactform" class="champ_contact" placeholder="email">
+        <input type="text" id="email_contactform" name="email_contactform" class="champ_contact" placeholder="email">
     
         <label for="telephone_contactform">Votre téléphone : </label>
         <input type="tel" id="telephone_contactform" name="telephone_contactform" class="champ_contact" placeholder="téléphone">

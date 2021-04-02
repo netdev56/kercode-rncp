@@ -66,9 +66,7 @@
 
         <footer>
         </footer>
-    
 
-    </section>
     
 <?php // Script JS pour le menu accordéon ?>
 <script src="app/public/back/js/menuBack.js"></script>
