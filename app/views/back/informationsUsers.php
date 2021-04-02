@@ -31,7 +31,7 @@
                 </tr>
 
                 <tr>
-                    <td><label for="pass">Votre mot de passe :</label></td>
+                    <td><label>Votre mot de passe :</label></td>
                     <td class="informationsusers_mdp"><a href="administration.php?action=informationsUsersMdp&id=<?= $infosUserAdmin['id'] ?>" title="Modifier votre mot de passe">Cliquez ici</a></td>
                 </tr>
 

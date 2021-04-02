@@ -20,7 +20,7 @@
 
         <form action="administration.php?action=connexionUser" method="POST">
             <div class="connexion_input">
-                <input type="email" name="mail" id="mail" placeholder="Email">
+                <input type="text" name="mail" id="mail" placeholder="Email">
                 <input type="password" name="pass" id="pass" placeholder="Mot de passe">
             </div>
             

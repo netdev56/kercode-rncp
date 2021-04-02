@@ -40,6 +40,22 @@ body{
     margin: 30px auto 30px;
 }
 
+.bloc_erreurs{
+    color: var(--blanc-color);
+    text-align: center;
+    /* font-weight: bold; */
+    padding: 10px 0;
+    /* font-size: 0.8rem; */
+    text-transform: uppercase;
+    background-color: RGBA(255,59,10,0.5);
+    /* margin-bottom: 20px; */
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
 
 
 
@@ -761,6 +777,32 @@ header .icon_menu{
 
 
 @media screen and (max-width: 768px){
+
+    /* ----- PAGE MESSAGERIE ----- */
+    .zone1_meteo{
+        display: block;
+    }
+
+    .bloc-imagemeteo{
+        text-align: center;
+    }
+
+    .bloc-heure-prevision{
+        margin: 0;
+        display: block;
+    }
+
+    .bloc-jours-prevision{
+        display: block;
+    }
+
+    .bloc-jours{
+        border: 3px solid var(--fd-body-gris-color);
+        margin-top: 0;
+    }
+
+
+
 
     /* ----- PAGE MESSAGERIE ----- */
     .bloc_messagerie_coordonnes{

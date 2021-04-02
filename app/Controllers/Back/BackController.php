@@ -20,6 +20,7 @@ class BackController{
     function createUser($pseudo, $lastname, $firstname, $mail, $pass){
         $createUserManager = new \Project\Models\UsersManager();
 
+        // Vérifie s'il les informations sont dans la base de donnée
         $pseudoModel = $createUserManager->voirPseudoExist($pseudo);
         $emailModel = $createUserManager->voirEmailExist($mail);
         $pseudoExist = $pseudoModel->fetch();
@@ -33,6 +34,7 @@ class BackController{
             $user = $createUserManager->createUser($pseudo, $lastname, $firstname, $mail, $pass);
             header('Location: administration.php?action=connexionAdministration');
         }
+
     }
 
 
@@ -58,6 +60,7 @@ class BackController{
         }else{
             echo 'Vos informations sont incorrectes';
         }
+
     }
 
 

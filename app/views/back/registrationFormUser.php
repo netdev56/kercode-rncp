@@ -23,7 +23,7 @@
                 <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
                 <input type="text" name="lastname" id="lastname" placeholder="Nom">
                 <input type="text" name="firstname" id="firstname" placeholder="Prénom">
-                <input type="email" name="mail" id="mail" placeholder="Email">
+                <input type="text" name="mail" id="mail" placeholder="Email">
                 <input type="password" name="pass" id="pass" placeholder="Mot de passe">
             </div>
             

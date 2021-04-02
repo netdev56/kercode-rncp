@@ -1300,6 +1300,16 @@ footer .coordonnees-aligne p{
         margin-bottom: 10px;
     }
 
+    .bloc_gite_zone{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bloc_gite_zone_texte{
+        text-align: center;
+        padding: 15px;
+    }
+
 
 
 
@@ -1337,6 +1347,30 @@ footer .coordonnees-aligne p{
     /* ----- PAGE ACTUALITES ----- */
     .card_actus{
         max-width: 100%;
+    }
+
+
+
+
+    /* ----- PAGE LE GITE ----- */
+    .bloc_gite_zone_images{
+        flex-direction: column;
+    }
+
+    .bloc_gite_zone_images img{
+        margin: 15px 0;
+    }
+
+    .bloc_gite_zone3_images{
+        flex-direction: column;
+    }
+
+    .bloc_gite_zone3_images img{
+        margin: 15px 0;
+    }
+
+    .parallax_legite{
+        display: none;
     }
 
 
