@@ -315,6 +315,11 @@ header .icon_menu{
 
 .card_actusadmin_texte{
     margin: 15px;
+    height: 245px;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card_actusadmin_texte span{
@@ -324,7 +329,7 @@ header .icon_menu{
 .btn_modifier_images{
     border: none;
     margin: 20px;
-    padding: 8px;
+    padding: 7px;
     background-color: var(--bleu-color);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -342,6 +347,7 @@ header .icon_menu{
 .btn_modifier_images a{
     color: var(--blanc-color);
     text-decoration: none;
+    font-size: 0.87rem;
 }
 
 .btn_modifier_images a:hover{
@@ -356,6 +362,10 @@ header .icon_menu{
     width: 92%;
 }
 
+.btn_gestions_actualites{
+    text-align: center;
+}
+
 
 
 
@@ -363,6 +373,14 @@ header .icon_menu{
 .textarea_guestbook{
     width: 300px;
     height: 100px;
+}
+
+.commentaire_gestbook{
+    height: 90px;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 
@@ -433,9 +451,8 @@ header .icon_menu{
 }
 
 .btn_supprimer_informationsusers{
-    border: none;
     margin: 20px;
-    padding: 8px;
+    padding: 7px;
     background-color: var(--rouge-color);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -452,6 +469,7 @@ header .icon_menu{
 .btn_supprimer_informationsusers a{
     color: var(--blanc-color);
     text-decoration: none;
+    font-size: 0.87rem;
 }
 
 .btn_supprimer_informationsusers a:hover{
@@ -461,7 +479,7 @@ header .icon_menu{
 .btn_modifier_informationsusers{
     border: none;
     margin: 20px;
-    padding: 8px;
+    padding: 7px;
     background-color: var(--vert-color);
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -479,6 +497,7 @@ header .icon_menu{
 .btn_modifier_informationsusers a{
     color: var(--blanc-color);
     text-decoration: none;
+    font-size: 0.87rem;
 }
 
 .btn_modifier_informationsusers a:hover{
@@ -596,14 +615,14 @@ header .icon_menu{
     margin-top: 10px;
 }
 
-.bloc_messagerie_message button{
+.bloc_messagerie_message .button_messagerie{
     background-color: transparent;
     border: none;
     margin: 20px;
 }
 
 .supprimer_messagerie{
-    padding: 8px;
+    padding: 7px;
     background-color: var(--rouge-color);
     border-radius: 5px;
     -webkit-border-radius: 5px;

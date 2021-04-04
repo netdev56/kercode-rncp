@@ -296,6 +296,8 @@ class BackController{
         $managementEditionAdmins = $managementAdminsEdition->adminsManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
 
         header("Location: administration.php?action=managementAdmin&id=$id_users");
+        
+        
     }
 
     // Ajouter un compte ADMIN
@@ -363,9 +365,10 @@ class BackController{
     // Editer un compte USER managementUserEdit.php
     function editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
         $managementUsersEdition = new \Project\Models\ManagementUserManager();
-        $managementEditionUsers = $managementUsersEdition->usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
-        
+        $managementEditionUsers = $managementUsersEdition->usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);  
+
         header("Location: administration.php?action=managementUsers&id=$id_users");
+        
     }
 
     // Ajouter un compte USER

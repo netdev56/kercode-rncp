@@ -104,7 +104,7 @@ class FrontController{
             // header('Location: index.php?action=contactezNous');
 
             $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
-            // require 'app/views/front/contactezNous.php';
+            require 'app/views/front/contactezNous.php';
         }else{
             $this->contactezNous($errors);
         }

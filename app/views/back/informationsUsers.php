@@ -47,8 +47,7 @@
                         </div>
                     </td>
                     <td>
-                        <div class="style_btn_informationsusers">
-                            <button class="btn_supprimer_informationsusers"><a href="administration.php?action=deletInfosUser&id=<?= $infosUserAdmin['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Supprimer</a></button>
+                        <div class="style_btn_informationsusers btn_supprimer_informationsusers"><a href="administration.php?action=deletInfosUser&id=<?= $infosUserAdmin['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Supprimer</a>
                         </div>
                     </td>
                 </tr>

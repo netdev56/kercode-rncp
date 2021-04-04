@@ -37,7 +37,7 @@
             </div>
 
             <div class="btn_supprimer_messagerie">
-                <button><a href="administration.php?action=deletContactMessaging&id=<?= htmlspecialchars($allMessage['id_contactform']) ?>" class="supprimer_messagerie">Supprimer</a></button>
+                <div class="button_messagerie"><a href="administration.php?action=deletContactMessaging&id=<?= htmlspecialchars($allMessage['id_contactform']) ?>" class="supprimer_messagerie">Supprimer</a></div>
             </div>
         </div>
 

@@ -50,12 +50,12 @@
                     </div>
 
 
-                    <div class="btn_gestions">
-                        <button class="btn_modifier_informationsusers"><a href="administration.php?action=articleAdminEdition&id=<?= $allArticleAdmin['id'] ?>">Editer l'article</a></button>
+                    <div class="btn_gestions_actualites">
+                        <div class="btn_modifier_informationsusers"><a href="administration.php?action=articleAdminEdition&id=<?= $allArticleAdmin['id'] ?>">Editer l'article</a></div>
 
-                        <button class="btn_modifier_images"><a href="administration.php?action=articleImgAdminEdition&id=<?= $allArticleAdmin['id'] ?>">Editer l'image</a></button>
+                        <div class="btn_modifier_images"><a href="administration.php?action=articleImgAdminEdition&id=<?= $allArticleAdmin['id'] ?>">Editer l'image</a></div>
 
-                        <button class="btn_supprimer_informationsusers"><a href="administration.php?action=deletArticleAdmin&id=<?= $allArticleAdmin['id'] ?>">Supprimer</a></button>
+                        <div class="btn_supprimer_informationsusers"><a href="administration.php?action=deletArticleAdmin&id=<?= $allArticleAdmin['id'] ?>">Supprimer</a></div>
                     </div>
 
             </div>

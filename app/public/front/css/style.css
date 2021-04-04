@@ -2,6 +2,7 @@
 @font-face {
 	font-family: "cinzel";
 	src: url('/app/public/front/policedecriture/cinzel-regular.otf');
+    font-display: swap;
 }
 
 
@@ -147,7 +148,7 @@ body{
 /* ----- MENU ----- */
 .close-btn img{
     width: 1.5rem;
-    height: auto;
+    height: 3rem;
     filter: invert(1) sepia(0) saturate(5) hue-rotate(175deg);
     -webkit-filter: invert(1) sepia(0) saturate(5) hue-rotate(175deg);
 }
@@ -246,7 +247,7 @@ header .btn_menu{
 
 .menu-btn img{
     width: 1.5rem;
-    height: auto;
+    height: 1.5rem;
     filter: invert(0.5) sepia(1) saturate(1) hue-rotate(357deg);
 }
 
@@ -393,6 +394,8 @@ header .btn_menu{
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    width: 400px;
+    height: 250px;
 }
 
 .zone2_accueil p{
@@ -444,8 +447,8 @@ header .btn_menu{
 
 .carteAccueil .card .blocImage{
     position: relative;
-    max-width: 260px;
-    height: 260px;
+    /* max-width: 260px;
+    height: 260px; */
     top: -60px;
     left: 20px;
     z-index: 1;
@@ -459,6 +462,8 @@ header .btn_menu{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+    width: 255px;
+    height: 255px;
 }
 
 .carteAccueil .card .bloc-texte{
@@ -523,6 +528,7 @@ header .btn_menu{
 .bloc_gite_zone_images img{
     margin: 0 10px 0 10px;
     width: 250px;
+    height: 190px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -679,6 +685,8 @@ header .btn_menu{
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    width: 200px;
+    height: 85px;
 }
 
 
@@ -720,7 +728,7 @@ header .btn_menu{
 .card_actus_texte{
     font-size: 1rem;
     margin: 20px 25px 20px 25px;
-    height: 120px;
+    height: 125px;
     -webkit-line-clamp: 5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -784,6 +792,7 @@ header .btn_menu{
 
 .bloc_texte_actus_single img{
     width: 600px;
+    height: 400px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -928,12 +937,12 @@ header .btn_menu{
 
 .icones_adresse_contact{
     width: 20px;
-    height: auto;
+    height: 60px;
 }
 
 .icones_telephone_contact{
     width: 23px;
-    height: auto;
+    height: 60px;
 }
 
 
@@ -960,7 +969,7 @@ header .btn_menu{
 }
 
 .svg_planDuSite{
-    width: auto;
+    width: 1.5rem;
     height: 1.5rem;
     filter: invert(1) sepia(0) saturate(5) hue-rotate(175deg);
 }

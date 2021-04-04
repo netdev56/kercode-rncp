@@ -38,12 +38,12 @@
 
     <p><span>Posté par :</span> <?=$allComments['pseudo']?></p>
     <p><span>Le :</span> <?=$allComments['datePublication']?></p>
-    <p><span>Commentaire :</span> <?=$allComments['comments']?></p>
+    <p class="commentaire_gestbook"><span>Commentaire :</span> <?=$allComments['comments']?></p>
 
 <div class="btn_gestions">
-    <button class="btn_modifier_informationsusers"><a href="administration.php?action=commentEdition&id=<?= $allComments['id'] ?>">Modifier</a></button>
+    <div class="btn_modifier_informationsusers"><a href="administration.php?action=commentEdition&id=<?= $allComments['id'] ?>">Modifier</a></div>
 
-    <button class="btn_supprimer_informationsusers"><a href="administration.php?action=deletComment&id=<?= $allComments['id'] ?>">Supprimer</a></button>
+    <div class="btn_supprimer_informationsusers"><a href="administration.php?action=deletComment&id=<?= $allComments['id'] ?>">Supprimer</a></div>
 </div>
 
 </div>
@@ -61,12 +61,12 @@
 
     <p><span>Posté par :</span> <?=$allComments['pseudo']?></p>
     <p><span>Le :</span> <?=$allComments['datePublication']?></p>
-    <p><span>Commentaire :</span> <?=$allComments['comments']?></p>
+    <p class="commentaire_gestbook"><span>Commentaire :</span> <?=$allComments['comments']?></p>
 
 <div class="btn_gestions">
-    <button class="btn_modifier_informationsusers"><a href="administration.php?action=commentEdition&id=<?= $allComments['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Modifier</a></button>
+    <div class="btn_modifier_informationsusers"><a href="administration.php?action=commentEdition&id=<?= $allComments['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Modifier</a></div>
 
-    <button class="btn_supprimer_informationsusers"><a href="administration.php?action=deletComment&id=<?= $allComments['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Supprimer</a></button>
+    <div class="btn_supprimer_informationsusers"><a href="administration.php?action=deletComment&id=<?= $allComments['id'] ?>&id_user=<?= $_SESSION['id'] ?>">Supprimer</a></div>
 </div>
 
 </div>

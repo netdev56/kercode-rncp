@@ -67,9 +67,9 @@ foreach($allUser as $allUsers){
     <p><span>Date d'inscription :</span> <?=$allUsers['dateUserManager']?></p>
 
 <div class="btn_gestions">
-    <button class="btn_modifier_informationsusers"><a href="administration.php?action=userEditionManagement&id=<?= $allUsers['id'] ?>">Modifier</a></button>
+    <div class="btn_modifier_informationsusers"><a href="administration.php?action=userEditionManagement&id=<?= $allUsers['id'] ?>">Modifier</a></div>
 
-    <button class="btn_supprimer_informationsusers"><a href="administration.php?action=deletUserManagement&id=<?= $allUsers['id'] ?>">Supprimer</a></button>
+    <div class="btn_supprimer_informationsusers"><a href="administration.php?action=deletUserManagement&id=<?= $allUsers['id'] ?>">Supprimer</a></div>
 </div>
 
 </div>
