@@ -7,32 +7,31 @@
 
     <h1>Modifier l'image</h1>
 
-        <form action="administration.php?action=updateImageArticle&id=<?= $articleImgAdmin['id'] ?>" method="post" enctype="multipart/form-data">
-        
+    <form action="administration.php?action=updateImageArticle&id=<?= $articleImgAdmin['id'] ?>" method="post" enctype="multipart/form-data">
+    
         <table class="informationsusers_input style_input_editarticle">
-                <tr>
-                    <td><label for="titre_img_articles">Titre seo de l'image : </label></td>
-                    <td><input type="text" id="titre_img_articles" name="titre_img_articles" value="<?= $articleImgAdmin['titre_img_articles'] ?>"></td>
-                </tr>
+            <tr>
+                <td><label for="titre_img_articles">Titre seo de l'image : </label></td>
+                <td><input type="text" id="titre_img_articles" name="titre_img_articles" value="<?= $articleImgAdmin['titre_img_articles'] ?>"></td>
+            </tr>
 
-                <tr>
-                    <td><label for="fileToUpload">Envoi du fichier : </label></td>
-                    <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <div class="style_btn_informationsusers">
-                            <button type="submit" name="submit" id="upload" class="btn_modifier_informationsusers">Enregistrer</button>
-                        </div>
-                    </td>
-                </tr>
+            <tr>
+                <td><label for="fileToUpload">Envoi du fichier : </label></td>
+                <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="style_btn_informationsusers">
+                        <button type="submit" name="submit" id="upload" class="btn_modifier_informationsusers">Enregistrer</button>
+                    </div>
+                </td>
+            </tr>
         </table>
 
     </form>
 
 </section>
-
 
 
 <?php // termine la session de temporisation ?>

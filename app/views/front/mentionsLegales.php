@@ -6,7 +6,7 @@
 </section>
     
 <section class="taille_1170 bloc_mentionslegales">
-
+    
     <p><a href="#definitionment">0. Définitions</a></p>
     <p><a href="#1presentationment">1. Présentation du site Internet</a></p>
     <p><a href="#2conditionment">2. Conditions générales d'utilisation de site et des services proposés</a></p>

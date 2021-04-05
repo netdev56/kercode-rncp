@@ -435,14 +435,6 @@ if(isset($_SESSION['id'])){
 
 
 
-        // PAGE D'ERREUR
-        // Formulaire
-        if($_GET['action'] == 'erreurFormAdmin'){
-            $backController->erreurFormAdmin();
-        }
-
-
-
 
 
 

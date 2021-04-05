@@ -113,18 +113,6 @@ class FrontController{
     }
 
 
-    // // Page Contactez-Nous ! - Envoi du formulaire
-    // function contactForms($lastname, $email, $telephone, $message, $rgpdContacform){
-    //     $contactManager = new \Project\Models\ContactFormManager();
-    //     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-    //         $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
-    //         require 'app/views/front/contactezNous.php';
-    //     }else{
-    //         header('Location: index.php?action=erreurForm');
-    //     }
-    // }
-
-
     // COOKIES
     // Acceptation des cookies - expire au bout d'un an
     function accepteCookie(){ 
@@ -134,13 +122,6 @@ class FrontController{
     // Page Politique de confidentialité
     function cookie(){
         require 'app/views/front/cookie.php';
-    }
-
-
-    // PAGE ERREUR
-    // Page erreur formulaire
-    function erreurForm(){
-        require 'app/views/front/erreurForm.php';
     }
 
 

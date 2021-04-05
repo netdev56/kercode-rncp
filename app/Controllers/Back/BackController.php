@@ -426,14 +426,6 @@ class BackController{
         header('Location: administration.php?action=contactMessaging');
     }
 
-
-
-    // PAGE D'ERREUR
-    // Formulaire
-    function erreurFormAdmin(){
-        require 'app/views/back/erreurFormAdmin.php';
-    }
-
     
 
 

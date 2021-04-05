@@ -35,37 +35,37 @@
 
     <div class="articles_accueil_style">
 
-            <?php // Zone 1 ?>
-            <div class="taille_1170">
-                <div class="zone1_accueil">
-                    <span>NOTRE PETITE MAISON DE CAMPAGNE VOUS OFFRIRA</span>
-                    <h3>CONFORT & TRANQUILLITÉ</h3>
-                    <p>C’est en août 2016 que le gîte a accueilli ses premiers vacanciers.<br>
-Durant 4 années, nous avons rénové cette ancienne « cave » afin d’y recevoir des visiteurs de divers horizons.</p>
-                    <p>Soucieux de vous offrir le meilleur confort, nous avons aménagé le gîte de façon chaleureuse pour que vous passiez de belles vacances en Bretagne.</p>
-                </div>
+        <?php // Zone 1 ?>
+        <div class="taille_1170">
+            <div class="zone1_accueil">
+                <span>NOTRE PETITE MAISON DE CAMPAGNE VOUS OFFRIRA</span>
+                <h3>CONFORT & TRANQUILLITÉ</h3>
+                <p>C’est en août 2016 que le gîte a accueilli ses premiers vacanciers.</p>
+                <p>Durant 4 années, nous avons rénové cette ancienne « cave » afin d’y recevoir des visiteurs de divers horizons.</p>
+                <p>Soucieux de vous offrir le meilleur confort, nous avons aménagé le gîte de façon chaleureuse pour que vous passiez de belles vacances en Bretagne.</p>
             </div>
+        </div>
 
-            <?php // Zone 2 ?>
-            <div class="taille_max">
-                <div class="taille_1170 bloc-zone2-accueil">
-                    <div><img src="/app/public/front/images/pageaccueil/gite-pluneret-morbihan.webp" alt="Gîte dans le Morbihan"></div>
-                    <div class="zone2_accueil">
-                        <h3>GÎTE TOUT CONFORT</h3>
-                        <span>POUR 4 PERSONNES – ACCÈS PMR</span><br>
-                        <p>Au rez-de-chaussée une chambre et sa salle d’eau privée se situent à côté de la pièce de vie.<br>
-À l’étage se trouvent une deuxième chambre spacieuse et une salle de bain.</p>
-                    </div>
+        <?php // Zone 2 ?>
+        <div class="taille_max">
+            <div class="taille_1170 bloc-zone2-accueil">
+                <div><img src="/app/public/front/images/pageaccueil/gite-pluneret-morbihan.webp" alt="Gîte dans le Morbihan"></div>
+                <div class="zone2_accueil">
+                    <h3>GÎTE TOUT CONFORT</h3>
+                    <span>POUR 4 PERSONNES – ACCÈS PMR</span>
+                    <p>Au rez-de-chaussée une chambre et sa salle d’eau privée se situent à côté de la pièce de vie.</p>
+                    <p>À l’étage se trouvent une deuxième chambre spacieuse et une salle de bain.</p>
                 </div>
             </div>
+        </div>
 
-            <?php // Zone 3 ?>
-            <div class="taille_1170">
-                <div class="zone3_accueil">
-                    <span>QUOI FAIRE EN BRETAGNE?</span>
-                    <h3>LES SITES À VISITER DANS LE MORBIHAN</h3>
-                </div>
+        <?php // Zone 3 ?>
+        <div class="taille_1170">
+            <div class="zone3_accueil">
+                <span>QUOI FAIRE EN BRETAGNE?</span>
+                <h3>LES SITES À VISITER DANS LE MORBIHAN</h3>
             </div>
+        </div>
 
     </div>
 

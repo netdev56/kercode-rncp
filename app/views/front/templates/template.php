@@ -80,8 +80,8 @@
 
     ?>
 
-
 </head>
+
 <body>
 
     <header>
@@ -101,9 +101,9 @@
 
         </nav>
 
-            <div class="btn_menu">
-                <i class="menu-btn"><img src="app/public/front/images/menu/bars-menu.svg" alt="Menu"></i>
-            </div>
+        <div class="btn_menu">
+            <i class="menu-btn"><img src="app/public/front/images/menu/bars-menu.svg" alt="Menu"></i>
+        </div>
             
         
     </header>
@@ -115,7 +115,14 @@
 
     <footer>
         <div class="coordonnees-aligne">
-            <p>Location Gîte La Cave dans le Morbihan en Bretagne </p><p> | </p><p> 43 rue de Lescheby 56400 Pluneret </p><p> | </p><p> 02 97 56 40 75 </p><p> | </p><p> <a href="index.php?action=planDuSite">Plan du site</a> </p><p> | </p><p> <a href="index.php?action=mentionsLegales">Mentions Légales</a></p>
+            <p>Location Gîte La Cave dans le Morbihan en Bretagne </p>
+            <p> | </p>
+            <p> 43 rue de Lescheby 56400 Pluneret </p>
+            <p> | </p>
+            <p> 02 97 56 40 75 </p>
+            <p> | </p>
+            <p> <a href="index.php?action=planDuSite">Plan du site</a> </p>
+            <p> | </p><p> <a href="index.php?action=mentionsLegales">Mentions Légales</a></p>
         </div>
         <div class="btn-seconnecter">
             <a href="administration.php?action=connexionAdministration" target="_blank" rel="noopener noreferrer">Se connecter</a>

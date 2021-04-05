@@ -4,7 +4,7 @@
 
 <section class="taille_1170 bloc_gestions">
 
-<h1>Vos messages</h1>
+    <h1>Vos messages</h1>
 
     <?php foreach($allMessaging as $allMessage){ ?>
 

@@ -69,13 +69,7 @@ try{
             $message = htmlspecialchars($_POST['message_contactform']);
             $rgpdContacform = htmlspecialchars($_POST['rgpd_contactform']);
 
-            // // Vérifie que les champs sont remplis
-            // if(!empty($lastname) && (!empty($email) && (!empty($telephone) && (!empty($message) && (!empty($rgpdContacform)))))){
             $frontController->contactForms($lastname, $email, $telephone, $message, $rgpdContacform);
-            // }else{
-            //     header('Location: index.php?action=erreurForm');
-            // }
-
         }
 
         // COOKIES
@@ -84,13 +78,6 @@ try{
             setcookie('accepteCookie', 'true', time() + 365*24*3600);
             $frontController->accepteCookie();
         } 
-
-
-        // PAGE ERREUR
-        // Page erreur formulaire
-        if($_GET['action'] == 'erreurForm'){
-            $frontController->erreurForm();
-        }
 
 
         // PAGE PLAN DU SITE

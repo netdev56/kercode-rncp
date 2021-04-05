@@ -4,15 +4,13 @@
 
 
 <section class="taille_1170 bloc_titre_general">
-        <h1>Page introuvable !</h1>
-    </section>
+    <h1>Page introuvable !</h1>
+</section>
 
-    <section class="taille_1170 bloc_404">
-        
+<section class="taille_1170 bloc_404">    
     <h2>404</h2>
     <p>La page n'existe pas ou a été supprimée</p>
-
-    </section>
+ </section>
 
 
 <?php // termine la session de temporisation ?>

@@ -18,19 +18,18 @@
 <section class="bloc_connexion">
     <h1>Se connecter</h1>
 
-        <form action="administration.php?action=connexionUser" method="POST">
-            <div class="connexion_input">
-                <input type="text" name="mail" id="mail" placeholder="Email">
-                <input type="password" name="pass" id="pass" placeholder="Mot de passe">
-            </div>
+    <form action="administration.php?action=connexionUser" method="POST">
+        <div class="connexion_input">
+            <input type="text" name="mail" id="mail" placeholder="Email">
+            <input type="password" name="pass" id="pass" placeholder="Mot de passe">
+        </div>
             
-            <div class="connexion_envoyer">
-                <button type="submit">Se connecter</button>
-            </div>
+        <div class="connexion_envoyer">
+            <button type="submit">Se connecter</button>
+        </div>
 
-        </form>
+    </form>
     
-
     <p class="inscription_connexion"><a href="administration.php?action=registrationFormUser">Créer un compte</a></p>
 
 </section>

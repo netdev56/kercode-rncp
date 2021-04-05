@@ -85,12 +85,9 @@ body{
 .bloc_erreurs{
     color: var(--blanc-color);
     text-align: center;
-    /* font-weight: bold; */
     padding: 10px 0;
-    /* font-size: 0.8rem; */
     text-transform: uppercase;
     background-color: RGBA(255,59,10,0.5);
-    /* margin-bottom: 20px; */
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -447,8 +444,6 @@ header .btn_menu{
 
 .carteAccueil .card .blocImage{
     position: relative;
-    /* max-width: 260px;
-    height: 260px; */
     top: -60px;
     left: 20px;
     z-index: 1;
@@ -642,6 +637,10 @@ header .btn_menu{
     margin-bottom: 10px;
 }
 
+.texte_style_tarifs{
+    text-align: left;
+}
+
 .table_bouton1{
     width: 100%;
     border-collapse: collapse;
@@ -650,7 +649,7 @@ header .btn_menu{
 }
 
 .bloc_table_entete{
-    background-color: var(--fd-menu-beige);
+    background-color: var(--gen_beige-clair-color);
 }
 
 .table_alignement_gauche{
@@ -809,7 +808,7 @@ header .btn_menu{
 /* ----- PAGE LIVRE D'OR ----- */
 .bloc_titre_general p{
     font-size: 1.1rem;
-    margin: 10px;
+    margin: 5px;
 }
 
 .bloc_commentaires_livre{

@@ -17,63 +17,62 @@
 </head>
 
 <body>
-        <?php // Menu ?>
-        <header id="navbar_haut" class="nav_haut">
+    <?php // Menu ?>
+    <header id="navbar_haut" class="nav_haut">
 
-            <a href="administration.php?action=dashboard&id=<?= $_SESSION['id'] ?>">Dashboard</a>
+        <a href="administration.php?action=dashboard&id=<?= $_SESSION['id'] ?>">Dashboard</a>
 
-            <?php if($_SESSION['roleusers'] == 'admin'){ ?>
-                <div class="dropdown-1">
-                    <button>Gestion des pages</button>
-                    <div class="content_drop-1">
-                        <a href="administration.php?action=actualitesAdmin">Actualités</a>
-                        <a href="administration.php?action=guestbookAdmin&id=<?= $_SESSION['id'] ?>">Livre d'or</a>
-                    </div>
-                </div>
-            <?php } ?>
-
-            <?php if($_SESSION['roleusers'] == 'user'){ ?>
-                <a href="administration.php?action=guestbook&id=<?= $_SESSION['id'] ?>">Livre d'or</a>
-            <?php } ?>
-
-            <?php if($_SESSION['roleusers'] == 'admin'){ ?>
-            <div class="dropdown-2">
-                <button>Gestion des utilisateurs</button>
-                <div class="content_drop-2">
-                    <a href="administration.php?action=managementAdmin&id=<?= $_SESSION['id'] ?>">Administrateurs</a>
-                    <a href="administration.php?action=managementUsers&id=<?= $_SESSION['id'] ?>">Utilisateurs</a>
+        <?php if($_SESSION['roleusers'] == 'admin'){ ?>
+            <div class="dropdown-1">
+                <button>Gestion des pages</button>
+                <div class="content_drop-1">
+                    <a href="administration.php?action=actualitesAdmin">Actualités</a>
+                    <a href="administration.php?action=guestbookAdmin&id=<?= $_SESSION['id'] ?>">Livre d'or</a>
                 </div>
             </div>
-            <?php } ?>
+        <?php } ?>
 
-            <a href="administration.php?action=editInfosUsers&id=<?= $_SESSION['id'] ?>">Vos informations</a>
+        <?php if($_SESSION['roleusers'] == 'user'){ ?>
+            <a href="administration.php?action=guestbook&id=<?= $_SESSION['id'] ?>">Livre d'or</a>
+        <?php } ?>
 
-            <?php if($_SESSION['roleusers'] == 'admin'){ ?>
-                <a href="administration.php?action=contactMessaging">Messagerie</a>
-            <?php } ?>
+        <?php if($_SESSION['roleusers'] == 'admin'){ ?>
+        <div class="dropdown-2">
+            <button>Gestion des utilisateurs</button>
+            <div class="content_drop-2">
+                <a href="administration.php?action=managementAdmin&id=<?= $_SESSION['id'] ?>">Administrateurs</a>
+                <a href="administration.php?action=managementUsers&id=<?= $_SESSION['id'] ?>">Utilisateurs</a>
+            </div>
+        </div>
+        <?php } ?>
 
-            <a href="./" target="blank">Retour au site</a>
+        <a href="administration.php?action=editInfosUsers&id=<?= $_SESSION['id'] ?>">Vos informations</a>
 
-            <a href="administration.php?action=deconnexionDashboard" class="deconnexion_style">Deconnexion</a>
+        <?php if($_SESSION['roleusers'] == 'admin'){ ?>
+            <a href="administration.php?action=contactMessaging">Messagerie</a>
+        <?php } ?>
 
-            <a class="icon_menu" onclick="menuResponsive()">&equiv;</a>
+        <a href="./" target="blank">Retour au site</a>
 
-        </header>
+        <a href="administration.php?action=deconnexionDashboard" class="deconnexion_style">Deconnexion</a>
+
+        <a class="icon_menu" onclick="menuResponsive()">&equiv;</a>
+
+    </header>
 
         
-        <main class="back_responsive">
-            <?php // Injection du contenu ?>
-            <?= $content ?>
-        </main>
+    <main class="back_responsive">
+        <?php // Injection du contenu ?>
+        <?= $content ?>
+    </main>
 
 
-        <footer>
-        </footer>
+    <footer>
+    </footer>
 
     
 <?php // Script JS pour le menu accordéon ?>
 <script src="app/public/back/js/menuBack.js"></script>
 
 </body>
-
 </html>

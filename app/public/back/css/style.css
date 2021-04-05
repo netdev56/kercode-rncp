@@ -43,12 +43,9 @@ body{
 .bloc_erreurs{
     color: var(--blanc-color);
     text-align: center;
-    /* font-weight: bold; */
     padding: 10px 0;
-    /* font-size: 0.8rem; */
     text-transform: uppercase;
     background-color: RGBA(255,59,10,0.5);
-    /* margin-bottom: 20px; */
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -727,8 +724,6 @@ header .icon_menu{
 .inscription_connexion a:hover{
     color: var(--beige-fonce-color);
 }
-
-
 
 
 

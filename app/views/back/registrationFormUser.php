@@ -12,6 +12,7 @@
 
     <title>Gîte La Cave - Inscription</title>
 </head>
+
 <body class="body_connexion">
 
 <section class="bloc_connexion">
@@ -36,7 +37,6 @@
         <p class="inscription_connexion"><a href="administration.php?action=connexionAdministration">Revenir à la page de connexion</a></p>
 
 </section>
-
 
     
 </body>

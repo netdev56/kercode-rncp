@@ -1,5 +1,4 @@
 /vendor/
-htaccess
 /bdd/
 .env
 .env_prod
