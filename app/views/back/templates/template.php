@@ -10,6 +10,9 @@
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
 
+    <?php // Favicon ?>
+    <link rel="icon" href="app/public/back/images/icones/favicon.ico" />
+
     <title>Tableau de bord - Administration - Gîte La Cave</title>
 </head>
 

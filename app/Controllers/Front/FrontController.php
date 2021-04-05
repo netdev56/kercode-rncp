@@ -89,6 +89,10 @@ class FrontController{
 
             $errors["telephone_requis"] = "Un numéro de télephone est requis";
 
+        }if(!is_numeric($telephone)){
+
+            $errors["telephone_num"] = "Votre numéro de télephone doit être composé de chiffres";
+
         // Message
         }if(empty($message)){
 
@@ -101,8 +105,6 @@ class FrontController{
 
         }if(empty($errors)){
             
-            // header('Location: index.php?action=contactezNous');
-
             $contactUserMail = $contactManager->contactForm($lastname, $email, $telephone, $message, $rgpdContacform);
             require 'app/views/front/contactezNous.php';
         }else{

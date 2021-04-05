@@ -127,7 +127,7 @@ body{
 
 .button-banner a{
     padding: 10px;
-    color: var(--blanc-color);
+    color: var(--noir-color);
     background: var(--vert-color);
     border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -743,18 +743,17 @@ header .btn_menu{
     width: 100%;
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: var(--blanc-color);
     padding-top: 10px;
     font-family: cinzel;
 }
 
 .card_actus_btn a{
     text-decoration: none;
-    color: var(--blanc-color);
+    color: var(--noir-color);
 }
 
 .card_actus_btn a:hover{
-    color: var(--noir-color);
+    color: var(--blanc-color);
 }
 
 
@@ -905,7 +904,7 @@ header .btn_menu{
     background-color: var(--vert-color);
     cursor: pointer;
     border: none;
-    color: var(--blanc-color);
+    color: var(--noir-color);
     margin-top: 15px;
 }
 
@@ -943,6 +942,10 @@ header .btn_menu{
 .icones_telephone_contact{
     width: 23px;
     height: 60px;
+}
+
+.bloc_contact_droite label{
+    color: var(--noir-color);
 }
 
 

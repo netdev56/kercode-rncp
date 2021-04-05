@@ -34,6 +34,12 @@
         <?= $errors["telephone_requis"]; ?> 
     </p> 
 <?php } ?>
+    
+<?php if (isset($errors["telephone_num"])){ ?>   
+    <p class="bloc_erreurs">               
+        <?= $errors["telephone_num"]; ?> 
+    </p> 
+<?php } ?>
 
 <?php //Message ?>         
 <?php if (isset($errors["message_requis"])){ ?>   

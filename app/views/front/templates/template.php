@@ -53,6 +53,9 @@
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/front/css/style.css">
 
+    <?php // Favicon ?>
+    <link rel="icon" href="app/public/front/images/icones/favicon.ico" />
+
     <?php // SEO - Meta: Title ?>
     <?php $seoDescription = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
