@@ -13,10 +13,15 @@ Site Web réalisé en :
     - Utilisation de PHP dotenv
     - ES6 JS 
 
-
 Dans le backend, il existe deux rôles d'utilisateurs (Administrateur & Utilisateur).
 Quand une personne s'inscrit, elle a le profil d'utilisateur.
 Vous trouverez le code administrateur en message privé, ainsi que les codes d'accès à la base de donnée en ligne et le compte FTP
+
+
+
+### Diagramme UML de la base de donnée
+
+![](UML-Kercode---RNCP.jpg)
 
 
 
