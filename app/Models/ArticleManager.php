@@ -6,12 +6,34 @@ class ArticleManager extends Manager{
 
     ///////FRONT
 
-    // Page actualités
-    public function readArticles(){
+    // Pagination
+    private $articlesParPage = 2;
+    private $quantitePage = 1;
+
+    public function nombreDePage(){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->query("SELECT * FROM articles ORDER BY articles.id DESC");
+        $req = $bdd->query("SELECT COUNT(*) AS totalArticles FROM articles");
+        $resultat = $req->fetch();
+        $total = $resultat['totalArticles'];
+        $nombreDePage = ceil($total / $this->articlesParPage);
 
+        return $nombreDePage;
+    }
+
+
+
+    // Page actualités
+    public function readArticles($quantitePage){
+
+        // Pagination
+        $this->quantitePage = $quantitePage;
+
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->query("SELECT * FROM articles ORDER BY id DESC LIMIT " . $this->articlesParPage . " OFFSET " . ($this->quantitePage - 1) * $this->articlesParPage);
+        // OFFSET sert à stopper le nombre d'article par page
+   
         return $req;
     }
 

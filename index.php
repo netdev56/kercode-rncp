@@ -19,7 +19,6 @@ try{
         } 
 
 
-
         // LE GITE
         // Page Le gîte
         if($_GET['action'] == 'legite'){
@@ -37,7 +36,15 @@ try{
         // ACTUALITES
         // Page Actualités
         if($_GET['action'] == 'actualites'){
-            $frontController->actualites();
+
+            // Pagination
+            if(isset($_GET['page'])){
+                $quantitePage = $_GET['page'];
+            }else{
+                $quantitePage = 1;
+            }
+
+            $frontController->actualites($quantitePage);
         } 
 
         // Page Actualités - Single

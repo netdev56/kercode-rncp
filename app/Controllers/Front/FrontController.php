@@ -27,9 +27,16 @@ class FrontController{
 
     // ACTUALITES
     // Page Actualités
-    function actualites(){
+    function actualites($quantitePage){
         $articles = new \Project\Models\ArticleManager();
-        $allArticles = $articles->readArticles();
+
+        // Pagination
+        $numeroDePage = $articles->nombreDePage();
+        if(!($quantitePage>0 && $quantitePage<=$numeroDePage)){
+            $quantitePage = 1;
+        }
+   
+        $allArticles = $articles->readArticles($quantitePage);
 
         require 'app/views/front/actualites.php';
     }

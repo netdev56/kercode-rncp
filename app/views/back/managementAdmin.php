@@ -5,7 +5,7 @@
 
     <?php // Formulaire pour ajouter un administrateur ?>
     <h1>Ajouter un administrateur</h1>
-
+    
     <form action="administration.php?action=createAdminManagement" method="POST">
         <table class="informationsusers_input">
             <tr>

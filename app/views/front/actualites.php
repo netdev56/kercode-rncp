@@ -26,6 +26,14 @@
         <?php } ?>
 
     </article>
+
+    <?php // Pagination ?>
+    <div class="btn_pagination_actualites">
+        <?php for ($i = 1; $i <= $numeroDePage; $i++){
+            echo "<p class='btn-pagination'><a href=\"index.php?action=actualites&page=$i\">$i </a></p>";
+        } ?>
+    </div>
+    
 </section>
 
 

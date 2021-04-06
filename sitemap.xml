@@ -12,13 +12,6 @@
   <url>
     <loc>http://projet-final.test/index.php?action=actualites</loc>
   </url>
-
-  <?php foreach($allsiteMap as $allssiteMap){ ?>  
-    <url>
-        <loc>http://projet-final.test/index.php?action=actualitesSingle&id=<?= $allssiteMap['id'] ?></loc>
-    </url>
-  <?php } ?>
-
   <url>
     <loc>http://projet-final.test/index.php?action=livredor</loc>
   </url>

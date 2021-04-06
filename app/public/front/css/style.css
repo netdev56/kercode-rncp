@@ -136,7 +136,7 @@ body{
 }
 
 .button-banner a:hover{
-    color: var(--noir-color);
+    color: var(--blanc-color);
 }
 
 
@@ -753,6 +753,29 @@ header .btn_menu{
 
 .card_actus_btn a:hover{
     color: var(--blanc-color);
+}
+.btn_pagination_actualites{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-pagination{
+    padding: 5px;
+    border: 1px solid var(--blanc-color);
+    font-size: 0.8rem;
+}
+
+.btn-pagination a{
+    color: var(--blanc-color);
+    text-decoration: none;
+}
+
+.btn-pagination a:hover{
+    color: var(--noir-color);
+}
+
+.btn-pagination:hover{
+    background-color: var(--beige-fonce-color);
 }
 
 
@@ -1382,6 +1405,15 @@ footer .coordonnees-aligne p{
 
     .parallax_legite{
         display: none;
+    }
+
+
+
+
+    /* ----- PAGE LE GITE ----- */
+    .panel table {
+        display: block;
+        overflow-x: auto;
     }
 
 
