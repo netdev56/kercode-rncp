@@ -586,6 +586,41 @@ header .icon_menu{
 
 
 
+/* ----- BOUTON MOT DE PASSE ----- */
+.btn_modifier_informationsusers_mdp{
+    border: none;
+    padding: 7px;
+    background-color: var(--vert-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--blanc-color);
+}
+
+.btn_modifier_informationsusers_mdp:hover{
+    background-color: var(--gen_beige-clair-color);
+}
+
+.btn_modifier_informationsusers_mdp a{
+    color: var(--blanc-color);
+    text-decoration: none;
+    font-size: 0.87rem;
+}
+
+.btn_modifier_informationsusers_mdp a:hover{
+    color: var(--noir-color);
+}
+
+#btn_password img{
+    margin: 0 0 10px 10px;
+}
+
+
+
+
 /* ----- PAGE MESSAGERIE ----- */
 .bloc_messagerie_coordonnes{
     display: flex;

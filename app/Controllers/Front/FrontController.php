@@ -135,7 +135,7 @@ class FrontController{
     // PAGE PLAN DU SITE
     function planDuSite(){
         $articlesPlan = new \Project\Models\ArticleManager();
-        $allArticlesPlan = $articlesPlan->readArticles();
+        $allArticlesPlan = $articlesPlan->planDuSite();
 
         require 'app/views/front/planDuSite.php';
     }

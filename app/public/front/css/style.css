@@ -1253,6 +1253,7 @@ footer .coordonnees-aligne p{
 
     .bloc_texte_actus_single img{
         width: 50%;
+        height: 50%;
     }
 
 
@@ -1420,3 +1421,31 @@ footer .coordonnees-aligne p{
 
 
 }
+
+
+
+
+@media screen and (max-width: 485px){
+
+    /* ----- PAGE ACCUEIL ----- */
+    .carteAccueil .card .blocImage {
+        top: -84px;
+        left: 0px;
+    }
+
+    .carteAccueil .card .blocImage img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carteAccueil .card:hover .bloc-texte {
+        margin-top: -59px;
+    }
+
+
+
+}
+
+
+
+

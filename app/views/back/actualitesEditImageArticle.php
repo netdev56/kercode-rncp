@@ -12,15 +12,18 @@
         <table class="informationsusers_input style_input_editarticle">
             <tr>
                 <td><label for="titre_img_articles">Titre seo de l'image : </label></td>
+            </tr>
+            <tr>
                 <td><input type="text" id="titre_img_articles" name="titre_img_articles" value="<?= $articleImgAdmin['titre_img_articles'] ?>"></td>
             </tr>
 
             <tr>
                 <td><label for="fileToUpload">Envoi du fichier : </label></td>
+            </tr>
+            <tr>
                 <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
             </tr>
             <tr>
-                <td></td>
                 <td>
                     <div class="style_btn_informationsusers">
                         <button type="submit" name="submit" id="upload" class="btn_modifier_informationsusers">Enregistrer</button>

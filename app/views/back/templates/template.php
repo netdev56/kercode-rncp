@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    ROBOT.TXT
 
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
@@ -70,7 +69,6 @@
 
     <footer>
     </footer>
-
     
 <?php // Script JS pour le menu accordéon ?>
 <script src="app/public/back/js/menuBack.js"></script>

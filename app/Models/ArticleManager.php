@@ -49,6 +49,16 @@ class ArticleManager extends Manager{
     }
 
 
+    // Page Plan du site
+    public function planDuSite(){
+        $bdd = $this->bdConnect();
+
+        $req = $bdd->query("SELECT * FROM articles ORDER BY id DESC");
+   
+        return $req;
+    }
+
+
 
 
     ///////BACK
