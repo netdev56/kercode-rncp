@@ -40,17 +40,16 @@ class ManagementUserManager extends Manager{
     
 
     // Editer un compte USER managementUserEdit.php
-    public function usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
+    public function usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $roleusers){
         $bdd = $this->bdConnect();
         
-        $req = $bdd->prepare("UPDATE users SET pseudo = :pseudo, lastname = :lastname, firstname = :firstname, email = :email, pass = :pass, roleusers = :roleusers WHERE id = :id");
+        $req = $bdd->prepare("UPDATE users SET pseudo = :pseudo, lastname = :lastname, firstname = :firstname, email = :email, roleusers = :roleusers WHERE id = :id");
         $req->execute([
             'id' => $id_users,
             'pseudo' => $pseudo,
             'lastname' => $lastname,
             'firstname' => $firstname,
             'email' => $email,
-            'pass' => $pass,
             'roleusers' => $roleusers
         ]);
         

@@ -71,11 +71,13 @@ function apimeteo(longitude,latitude){
 
 
         // Affichage de l'image
-        if(heureActuelle >= 6 && heureActuelle < 21){ //Si c'est le jour
-            imageMeteo.src = `./app/public/back/images/apimeteo/jour/${resultatApi.current.weather[0].icon}.svg`
-        }else{ //Sinon c'est la nuit
-            imageMeteo.src = `./app/public/back/images/apimeteo/nuit/${resultatApi.current.weather[0].icon}.svg`
-        }
+        // if(heureActuelle >= 6 && heureActuelle < 21){ //Si c'est le jour
+        //     imageMeteo.src = `./app/public/back/images/apimeteo/jour/${resultatApi.current.weather[0].icon}.svg`
+        // }else{ //Sinon c'est la nuit
+        //     imageMeteo.src = `./app/public/back/images/apimeteo/nuit/${resultatApi.current.weather[0].icon}.svg`
+        // }
+
+        imageMeteo.src = `./app/public/back/images/apimeteo/${resultatApi.current.weather[0].icon}.svg`;
 
 
     })

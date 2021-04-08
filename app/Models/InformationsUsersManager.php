@@ -18,17 +18,16 @@ class InformationsUsersManager extends Manager{
 
 
     // Editer les informations de l'utilisateur dans la page informationsUsers.php
-    public function editinfosuser($id_user, $pseudo, $lastname, $firstname, $email, $pass){
+    public function editinfosuser($id_user, $pseudo, $lastname, $firstname, $email){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->prepare("UPDATE users SET pseudo = :pseudo, lastname = :lastname, firstname = :firstname, email = :email, pass = :pass WHERE id = :id");
+        $req = $bdd->prepare("UPDATE users SET pseudo = :pseudo, lastname = :lastname, firstname = :firstname, email = :email WHERE id = :id");
         $req->execute([
             'id' => $id_user,
             'pseudo' => $pseudo,
             'lastname' => $lastname,
             'firstname' => $firstname,
-            'email' => $email,
-            'pass' => $pass
+            'email' => $email
         ]);
 
         return $req;

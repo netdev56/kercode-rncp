@@ -14,6 +14,8 @@ try{
 // Condition pour autoriser les utilisateurs à voir certaine page une fois connecté
 if(isset($_SESSION['id'])){
 
+
+
     if(isset($_GET['action'])){
 
         // DASHBOARD
@@ -37,13 +39,6 @@ if(isset($_SESSION['id'])){
         elseif($_GET['action'] == 'guestbook'){
             $id = $_GET['id'];
             $backController->guestbook($id);
-        }
-
-
-        // Affichage des commentaires du livre d'or ADMIN
-        elseif($_GET['action'] == 'guestbookAdmin'){
-            $id = $_GET['id'];
-            $backController->guestbookAdmin($id);
         }
 
 
@@ -89,6 +84,85 @@ if(isset($_SESSION['id'])){
             $id = $_GET['id'];
             $backController->deletComment($id);
         }
+
+
+
+
+
+        // INFORMATION UTILISATEUR
+        // Page : éditer les informations de l'utilisateur
+        elseif($_GET['action'] == 'editInfosUsers'){
+            $id_user = $_GET['id'];
+            $backController->editInfosUser($id_user);
+        }
+
+
+        // Editer les informations de l'utilisateur dans la page informationsUsers.php
+        elseif($_GET['action'] == 'editInformationsUsers'){ 
+            $id_user = $_GET['id'];
+            $pseudo = htmlspecialchars($_POST['pseudo']);
+            $lastname = htmlspecialchars($_POST['lastname']);
+            $firstname = htmlspecialchars($_POST['firstname']);
+            $email = htmlspecialchars($_POST['email']);
+            $pass = htmlspecialchars($_POST['pass']);
+
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
+            // Vérifie que le champ soit rempli
+            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email) && (!empty($pass)))))){
+                $backController->editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email, $pass);
+            }else{
+                throw new Exception('Le champ n\'est pas remplis');
+            }
+
+        }
+
+
+        // Supprimer le compte utilisateur
+        elseif($_GET['action'] == 'deletInfosUser'){
+            $id = $_GET['id'];
+            $backController->deletInfoUser($id);
+        }
+
+
+        // Page : modifier le mot de passe
+        elseif($_GET['action'] == 'informationsUsersMdp'){
+            $id_user = $_GET['id'];
+            $backController->informationsUsersMdp($id_user);
+        }
+
+
+        // Editer le mot de passe
+        elseif($_GET['action'] == 'editInformationsUsersMdp'){ 
+            $id_user = $_GET['id'];
+            $pass = htmlspecialchars($_POST['pass']);
+
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
+            // Vérifie que le champ soit rempli
+            if(!empty($pass)){
+                $backController->editUsersInfosMdp($id_user, $pass);
+            }else{
+                throw new Exception('Le champ n\'est pas remplis');
+            }
+
+        }
+
+
+
+
+    // Accessible uniquement aux Administrateurs
+    }if(isset($_SESSION["roleusers"]) && $_SESSION["roleusers"] == "admin") {
+
+        // LIVRE D'OR
+        // Affichage des commentaires du livre d'or ADMIN
+        if($_GET['action'] == 'guestbookAdmin'){
+            $id = $_GET['id'];
+            $backController->guestbookAdmin($id);
+        }
+
 
 
 
@@ -165,65 +239,6 @@ if(isset($_SESSION['id'])){
 
 
 
-        // INFORMATION UTILISATEUR
-        // Page : éditer les informations de l'utilisateur
-        elseif($_GET['action'] == 'editInfosUsers'){
-            $id_user = $_GET['id'];
-            $backController->editInfosUser($id_user);
-        }
-
-
-        // Editer les informations de l'utilisateur dans la page informationsUsers.php
-        elseif($_GET['action'] == 'editInformationsUsers'){ 
-            $id_user = $_GET['id'];
-            $pseudo = htmlspecialchars($_POST['pseudo']);
-            $lastname = htmlspecialchars($_POST['lastname']);
-            $firstname = htmlspecialchars($_POST['firstname']);
-            $email = htmlspecialchars($_POST['email']);
-
-            // Vérifie que le champ soit rempli
-            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email))))){
-                $backController->editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email);
-            }else{
-                throw new Exception('Le champ n\'est pas remplis');
-            }
-
-        }
-
-
-        // Supprimer le compte utilisateur
-        elseif($_GET['action'] == 'deletInfosUser'){
-            $id = $_GET['id'];
-            $backController->deletInfoUser($id);
-        }
-
-
-        // Page : modifier le mot de passe
-        elseif($_GET['action'] == 'informationsUsersMdp'){
-            $id_user = $_GET['id'];
-            $backController->informationsUsersMdp($id_user);
-        }
-
-
-        // Editer le mot de passe
-        elseif($_GET['action'] == 'editInformationsUsersMdp'){ 
-            $id_user = $_GET['id'];
-            $pass = htmlspecialchars($_POST['pass']);
-
-            // Sécurise le mot de passe avec un hachage
-            $pass = password_hash($pass, PASSWORD_DEFAULT);
-            
-            // Vérifie que le champ soit rempli
-            if(!empty($pass)){
-                $backController->editUsersInfosMdp($id_user, $pass);
-            }else{
-                throw new Exception('Le champ n\'est pas remplis');
-            }
-
-        }
-
-
-
 
         // GESTION ADMINISTRATEURS
         // Page : gestion des administrateurs
@@ -254,11 +269,15 @@ if(isset($_SESSION['id'])){
             $lastname = htmlspecialchars($_POST['lastname']);
             $firstname = htmlspecialchars($_POST['firstname']);
             $email = htmlspecialchars($_POST['email']);
+            $pass = htmlspecialchars($_POST['pass']);
             $roleusers = $_POST['roleusers'];
 
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
             // Vérifie que le champ soit rempli
-            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email))))){
-                $backController->editAdminsManagement($id_users, $pseudo, $lastname, $firstname, $email, $roleusers);
+            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email) && (!empty($pass)))))){
+                $backController->editAdminsManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
             }else{
                 throw new Exception('Le champ n\'est pas remplis');
             }
@@ -312,7 +331,8 @@ if(isset($_SESSION['id'])){
             }
 
         }
-        
+
+
 
 
 
@@ -345,11 +365,15 @@ if(isset($_SESSION['id'])){
             $lastname = htmlspecialchars($_POST['lastname']);
             $firstname = htmlspecialchars($_POST['firstname']);
             $email = htmlspecialchars($_POST['email']);
+            $pass = htmlspecialchars($_POST['pass']);
             $roleusers = $_POST['roleusers'];
 
+            // Sécurise le mot de passe avec un hachage
+            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            
             // Vérifie que le champ soit rempli
-            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email))))){
-                $backController->editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $roleusers);
+            if(!empty($pseudo) && (!empty($lastname) && (!empty($firstname) && (!empty($email) && (!empty($pass)))))){
+                $backController->editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
             }else{
                 throw new Exception('Le champ n\'est pas remplis');
             }
@@ -403,10 +427,11 @@ if(isset($_SESSION['id'])){
             }
 
         }
-                
 
 
 
+
+  
         // MESSAGERIE
         // Page Contactez-Nous !
         elseif($_GET['action'] == 'contactMessaging'){
@@ -416,32 +441,25 @@ if(isset($_SESSION['id'])){
 
         // Supprimer un message
         elseif($_GET['action'] == 'deletContactMessaging'){
-
             $id_contactform = $_GET['id'];
             $backController->deletContactMessage($id_contactform);
 
 
-        } else {
-            // Methode sans traitement préalable
+
+        } else {    
             session_destroy();
-    
-            require "./app/views/front/404.php";
-            
+            require "./app/views/front/404.php"; 
         }
 
 
 
-
-
-
-        
-
+    } else {
+        throw new Exception("Vous n'avez pas les droits suffisants pour ...");
     }
-}
 
-    
-    
-    elseif(isset($_GET['action'])){
+
+
+    if(isset($_GET['action'])){
 
         // CONNEXION
         // Page de connexion Administration
@@ -500,10 +518,10 @@ if(isset($_SESSION['id'])){
         }
 
 
-        
+    }   
 
 
-    }
+}
 
 
 

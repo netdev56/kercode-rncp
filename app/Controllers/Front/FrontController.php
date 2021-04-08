@@ -7,6 +7,13 @@ class FrontController{
     // ACCUEIL
     // Page Accueil
     function accueil(){ 
+
+        $meta_description = "Gîte La Cave est un gite à louer sur Pluneret dans le Morbihan en Bretagne. Location à Pluneret proche de Quiberon, Vannes, Auray, Carnac, Trinité sur Mer";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location de gite à Pluneret dans le Morbihan en Bretagne";
+
         require 'app/views/front/accueil.php';
     }
 
@@ -14,6 +21,13 @@ class FrontController{
     // LE GITE
     // Page Le gîte
     function legite(){
+
+        $meta_description = "Louer un gite en Bretagne, notre gîte est situé à Pluneret proche de Quiberon, Vannes, Sainte Anne d'Auray, Carnac dans le Morbihan";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location de vacance à Pluneret proche de Quiberon, Auray";
+
         require 'app/views/front/leGite.php';
     }
 
@@ -21,6 +35,13 @@ class FrontController{
     // TARIFS
     // Page tarifs
     function tarifs(){ 
+
+        $meta_description = "Gîte La Cave est un gite à louer sur Pluneret dans le Morbihan en Bretagne. Location à Pluneret proche de Quiberon, Vannes, Auray, Carnac, Trinité sur Mer";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location Pluneret dans le Morbihan en Bretagne";
+
         require 'app/views/front/tarifs.php';
     }
 
@@ -28,6 +49,14 @@ class FrontController{
     // ACTUALITES
     // Page Actualités
     function actualites($quantitePage){
+
+        $meta_description = "Venez louer votre gite proche de Carnac, Quiberon, Vannes, Trinité sur mer, Vannes, Sarzeau. Location au calme proche de la mer pour se détendre";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location gite proche de Quiberon, Carnac, Vannes, Auray";
+
+
         $articles = new \Project\Models\ArticleManager();
 
         // Pagination
@@ -43,6 +72,13 @@ class FrontController{
 
     // Page Actualités - Single
     function actualitesSingle($id){
+
+        $meta_description = "Venez louer votre gite proche de Carnac, Quiberon, Vannes, Trinité sur mer, Vannes, Sarzeau. Location au calme proche de la mer pour se détendre dans le Morbihan";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location gite proche de Quiberon, Carnac";
+
         $articlesSingle = new \Project\Models\ArticleManager();
         $allArticlesSingle = $articlesSingle->readArticlesSingle($id);
 
@@ -53,6 +89,13 @@ class FrontController{
     // LIVRE D'OR
     // Page Livre d'or
     function livredor(){
+
+        $meta_description = "Gîte La Cave - Location à Pluneret proche de Quiberon, Vannes, Auray, Carnac, Trinité sur Mer";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location gite proche de Vannes, Auray en Bretagne";
+
         $guestbook = new \Project\Models\GuestbookCommentManager();
         $allGuestbookComments = $guestbook->guestbooks();
 
@@ -63,6 +106,13 @@ class FrontController{
     // CONTACTEZ-NOUS
     // Page Contactez-Nous !
     function contactezNous($errors=array()){
+
+        $meta_description = "Gîte à louer à Pluneret dans le Morbihan proche de Carnac, Auray, Quiberon, la Trinité sur Mer. Gîte La Cave - 43 rue de Lescheby 56400 Pluneret";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte La Cave - Location Pluneret dans le Morbihan en Bretagne";
+
         $errors = $errors;
         require 'app/views/front/contactezNous.php';
     }
@@ -70,6 +120,14 @@ class FrontController{
 
     // Page Contactez-Nous ! - Envoi du formulaire
     function contactForms($lastname, $email, $telephone, $message, $rgpdContacform){
+
+        $meta_description = "Gîte à louer à Pluneret dans le Morbihan proche de Carnac, Auray, Quiberon, la Trinité sur Mer. Gîte La Cave - 43 rue de Lescheby 56400 Pluneret";
+
+        $meta_robots = "noindex,nofollow";
+
+        $meta_title = "Gîte La Cave - Location Pluneret dans le Morbihan en Bretagne";
+
+
         $contactManager = new \Project\Models\ContactFormManager();
         
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -120,20 +178,16 @@ class FrontController{
     }
 
 
-    // COOKIES
-    // Acceptation des cookies - expire au bout d'un an
-    function accepteCookie(){ 
-        header('Location: ./');      
-    }
-
-    // Page Politique de confidentialité
-    function cookie(){
-        require 'app/views/front/cookie.php';
-    }
-
-
     // PAGE PLAN DU SITE
     function planDuSite(){
+
+        $meta_description = "Gîte à louer à Pluneret dans le Morbihan proche de Carnac, Auray.";
+
+        $meta_robots = "index,follow";
+
+        $meta_title = "Gîte à louer à Pluneret dans le Morbihan";
+
+
         $articlesPlan = new \Project\Models\ArticleManager();
         $allArticlesPlan = $articlesPlan->planDuSite();
 
@@ -143,11 +197,25 @@ class FrontController{
 
     // PAGE MENTIONS LEGALES
     function mentionsLegales(){
+
+        $meta_description = "Mentions Légales";
+
+        $meta_robots = "noindex,nofollow";
+
+        $meta_title = "Mentions Légales";
+        
         require 'app/views/front/mentionsLegales.php';
     }
 
     // PAGE 404
     function p404(){
+
+        $meta_description = "Page 404";
+
+        $meta_robots = "noindex,nofollow";
+
+        $meta_title = "Page 404";
+
         require 'app/views/front/404.php';
     }
 

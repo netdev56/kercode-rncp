@@ -230,9 +230,9 @@ class BackController{
     }
 
     // Editer les informations de l'utilisateur dans la page informationsUsers.php
-    function editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email, $pass){
+    function editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email){
         $editinfosusers = new \Project\Models\InformationsUsersManager();
-        $editinfos = $editinfosusers->editinfosuser($id_user, $pseudo, $lastname, $firstname, $email, $pass);
+        $editinfos = $editinfosusers->editinfosuser($id_user, $pseudo, $lastname, $firstname, $email);
         $_SESSION["firstname"] = $firstname;
 
         header("Location: administration.php?action=editInfosUsers&id=$id_user");
@@ -291,9 +291,9 @@ class BackController{
     }
 
     // Editer un compte ADMIN managementAdminEdit.php
-    function editAdminsManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
+    function editAdminsManagement($id_users, $pseudo, $lastname, $firstname, $email, $roleusers){
         $managementAdminsEdition = new \Project\Models\ManagementAdminManager();
-        $managementEditionAdmins = $managementAdminsEdition->adminsManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);
+        $managementEditionAdmins = $managementAdminsEdition->adminsManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $roleusers);
 
         header("Location: administration.php?action=managementAdmin&id=$id_users");
         
@@ -315,7 +315,7 @@ class BackController{
             echo 'Cette adresse email existe déjà';
         } else{
             $createAdminManag = $AdminManagement->createManagementAdmins($pseudo, $lastname, $firstname, $mail, $pass);
-            header("Location: administration.php?action=managementAdmin");
+            header("Location: administration.php?action=managementAdmin&id=" . $_SESSION["id"]);
         }
     }
 
@@ -363,9 +363,9 @@ class BackController{
     }
 
     // Editer un compte USER managementUserEdit.php
-    function editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers){
+    function editUsersManagement($id_users, $pseudo, $lastname, $firstname, $email, $roleusers){
         $managementUsersEdition = new \Project\Models\ManagementUserManager();
-        $managementEditionUsers = $managementUsersEdition->usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $pass, $roleusers);  
+        $managementEditionUsers = $managementUsersEdition->usersManagementEdition($id_users, $pseudo, $lastname, $firstname, $email, $roleusers);  
 
         header("Location: administration.php?action=managementUsers&id=$id_users");
         
@@ -386,7 +386,7 @@ class BackController{
             echo 'Cette adresse email existe déjà';
         } else{
             $createUserManag = $UserManagement->createManagementUsers($pseudo, $lastname, $firstname, $mail, $pass);
-            header('Location: administration.php?action=managementUsers');
+            header("Location: administration.php?action=managementUsers&id=" . $_SESSION["id"]);
         }
     }
 
