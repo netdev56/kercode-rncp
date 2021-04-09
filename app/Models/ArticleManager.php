@@ -7,7 +7,7 @@ class ArticleManager extends Manager{
     ///////FRONT
 
     // Pagination
-    private $articlesParPage = 2;
+    private $articlesParPage = 4;
     private $quantitePage = 1;
 
     public function nombreDePage(){

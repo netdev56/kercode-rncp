@@ -59,13 +59,6 @@
         <?php } ?>
 
     </div>
-    
-    <?php // Pagination ?>
-    <p>Pages : <?php
-    for ($i = 1; $i <= $numeroDePage; $i++){
-        echo "<a href=\"administration.php?action=actualitesAdmin&page=$i\">$i </a>";
-    } ?>
-    </p>
 
 </section>
 
