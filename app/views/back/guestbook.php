@@ -1,6 +1,15 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
+<?php
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
+
+echo $userId;
+?>
+    
+
 <section class="taille_1170 bloc_gestions">
 
     <?php // Formulaire pour ajouter un commentaire ?>

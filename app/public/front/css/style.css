@@ -97,50 +97,6 @@ body{
 
 
 
-/* ----- COOKIES ----- */
-/* -- Bannière cookie -- */
-.banner-cookie{
-    border-top: solid 2px var(--noir-color); 
-    background: var(--fd-menu-noir-opac);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 30px;
-    color: var(--blanc-color);
-}
-
-.text-banner p{
-    font-size: large;
-}
-
-.text-banner a{
-    text-decoration: none;
-    color: var(--fd-menu-beige);
-}
-
-.button-banner a{
-    padding: 10px;
-    color: var(--noir-color);
-    background: var(--vert-color);
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.button-banner a:hover{
-    color: var(--blanc-color);
-}
-
-
-
 
 /* ----- MENU ----- */
 .close-btn img{

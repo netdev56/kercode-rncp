@@ -65,7 +65,9 @@
             <p> | </p><p> <a href="index.php?action=mentionsLegales">Mentions Légales</a></p>
         </div>
         <div class="btn-seconnecter">
-            <a href="administration.php?action=connexionAdministration" target="_blank" rel="noopener noreferrer">Se connecter</a>
+            <a href="administration.php?action=connexionAdministration" rel="noopener noreferrer">Se connecter</a>
+            <!-- <a href="administration.php?action=connexionAdministration" target="_blank" rel="noopener noreferrer">Se connecter</a> -->
+
         </div>
     </footer>
     

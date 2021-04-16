@@ -39,7 +39,7 @@ class GuestbookCommentManager extends Manager{
     public function affichageGuestbookCommentAdmin($id){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->prepare("SELECT guestbooks.*, users.pseudo, DATE_FORMAT(guestbooks.datecreatcomments, '%d/%m/%Y %Hh%imin%ss') AS datePublication FROM guestbooks, users WHERE guestbooks.idguestbooksusers = users.id ORDER BY guestbooks.id DESC");
+        $req = $bdd->prepare("SELECT guestbooks.*, users.pseudo, DATE_FORMAT(guestbooks.datecreatcomments, '%d/%m/%Y %Hh%imin%ss') AS datePublication FROM guestbooks, users WHERE guestbooks.idguestbooksusers = users.id AND users.id = ? ORDER BY guestbooks.id DESC");
         $req->execute([$id]);
 
         $comments = $req->fetchAll();

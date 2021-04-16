@@ -7,11 +7,10 @@ class ManagementAdminManager extends Manager{
     ///////BACK
     
     // Page : gestion des administrateurs
-    public function allManagementAdmin($id_users){
+    public function allManagementAdmin(){
         $bdd = $this->bdConnect();
 
-        $req = $bdd->prepare("SELECT *, DATE_FORMAT(dateinscription, '%d/%m/%Y') AS dateAdminManager FROM users WHERE roleusers = 'admin' ORDER BY id DESC");
-        $req->execute(array($id_users));
+        $req = $bdd->query("SELECT *, DATE_FORMAT(dateinscription, '%d/%m/%Y') AS dateAdminManager FROM users WHERE roleusers = 'admin' ORDER BY id DESC");
 
         return $req;
     }

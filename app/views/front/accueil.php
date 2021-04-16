@@ -33,6 +33,12 @@
 <?php // Zones de textes ?>
 <section>
 
+
+<?php 
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+?>
     <div class="articles_accueil_style">
 
         <?php // Zone 1 ?>

@@ -4,6 +4,7 @@ session_start();
 
 //Prend les informations du fichier autoload.php
 require_once __DIR__ . '/vendor/autoload.php';
+require 'app/Controllers/Back/securite.php';
 
 
 try{
@@ -151,14 +152,17 @@ if(isset($_SESSION['id'])){
         }
 
 
-
+    
 
     // Accessible uniquement aux Administrateurs
-    }if(isset($_SESSION["roleusers"]) && $_SESSION["roleusers"] == "admin") {
+    }
+    if(isset($_SESSION["roleusers"]) && $_SESSION["roleusers"] == "admin") 
+    {
 
         // LIVRE D'OR
         // Affichage des commentaires du livre d'or ADMIN
         if($_GET['action'] == 'guestbookAdmin'){
+            isConnect();
             $id = $_GET['id'];
             $backController->guestbookAdmin($id);
         }
@@ -448,18 +452,19 @@ if(isset($_SESSION['id'])){
 
         } else {    
             session_destroy();
-            require "./app/views/front/404.php"; 
+            $frontController->p404();
         }
 
 
 
-    } else {
-        throw new Exception("Vous n'avez pas les droits suffisants pour ...");
+
+
     }
+    
+    if(isset($_GET['action']))
+    {
 
 
-
-    if(isset($_GET['action'])){
 
         // CONNEXION
         // Page de connexion Administration
@@ -511,17 +516,19 @@ if(isset($_SESSION['id'])){
             }
             
         } else {
-            // Methode sans traitement préalable
-            
-                require "./app/views/front/404.php";
+
+            $frontController->p404();
             
         }
 
 
-    }   
+    }  else {
+        throw new Exception("Vous n'avez pas les droits suffisants pour ...");
+    } 
 
 
 }
+
 
 
 

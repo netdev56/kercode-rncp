@@ -47,6 +47,7 @@ class BackController{
         // Compare les mots de passe entre la BDD et le champ
         $isPasswordCorrect = password_verify($pass, $result['pass']);
 
+        
         $_SESSION['pseudo'] = $result['pseudo'];
         $_SESSION['lastname'] = $result['lastname'];
         $_SESSION['firstname'] = $result['firstname'];
@@ -85,7 +86,7 @@ class BackController{
     function guestbookAdmin($id){
         $guestbookAdmin = new \Project\Models\GuestbookCommentManager();
         $allGuestbookCommentsAdmin = $guestbookAdmin->affichageGuestbookCommentAdmin($id);
-
+        $userId = $id;
         require 'app/views/back/guestbook.php';
     }
 
@@ -267,9 +268,9 @@ class BackController{
 
     // GESTION ADMINISTRATEURS
     // Page : gestion des administrateurs
-    function managementAdminAll($id_users){
+    function managementAdminAll(){
         $Admins = new \Project\Models\ManagementAdminManager();
-        $allAdmin = $Admins->allManagementAdmin($id_users);
+        $allAdmin = $Admins->allManagementAdmin();
 
         require 'app/views/back/managementAdmin.php';
     }
@@ -339,9 +340,9 @@ class BackController{
 
     // GESTION UTILISATEURS
     // Page : gestion des utilisateurs
-    function managementUsersAll($id_users){
+    function managementUsersAll(){
         $Users = new \Project\Models\ManagementUserManager();
-        $allUser = $Users->allManagementUser($id_users);
+        $allUser = $Users->allManagementUser();
 
         require 'app/views/back/managementUsers.php';
     }

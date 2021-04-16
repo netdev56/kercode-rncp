@@ -55,7 +55,7 @@ try{
             try {
                 $frontController->$method();
             } catch(Error $_) {
-                require "./app/views/front/404.php";
+                $frontController->p404();
             }
         }
 
