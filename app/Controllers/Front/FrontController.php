@@ -220,15 +220,6 @@ class FrontController{
     }
 
 
-    // PAGE SITEMAP.XML
-    function siteMap(){
-        $articlesSiteMap = new \Project\Models\ArticleManager();
-        $allsiteMap = $articlesSiteMap->readArticles();
-
-        require 'app/views/front/siteMap.php';
-    }
-
-
 
 
 }

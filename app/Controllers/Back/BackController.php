@@ -83,10 +83,9 @@ class BackController{
     }
 
     // Page : Afficher des commentaires du livre d'or de l'utilisateur ADMIN
-    function guestbookAdmin($id){
+    function guestbookAdmin(){
         $guestbookAdmin = new \Project\Models\GuestbookCommentManager();
-        $allGuestbookCommentsAdmin = $guestbookAdmin->affichageGuestbookCommentAdmin($id);
-        $userId = $id;
+        $allGuestbookCommentsAdmin = $guestbookAdmin->affichageGuestbookCommentAdmin();
         require 'app/views/back/guestbook.php';
     }
 
