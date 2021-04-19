@@ -12,6 +12,7 @@
     --fd-body-gris-color: #f0f0f0;
     --gris-color: #f2f2f2;
     --rgba-3-color: rgba(0,0,0,0.3);
+    --fd-bloc-erreur: rgba(255,59,10,0.5);
 }
 
 
@@ -45,7 +46,7 @@ body{
     text-align: center;
     padding: 10px 0;
     text-transform: uppercase;
-    background-color: RGBA(255,59,10,0.5);
+    background-color: var(--fd-bloc-erreur);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -773,11 +774,11 @@ header .icon_menu{
     
     }
 
-    header.responsive > a{
+    header.responsive > a.menu_responsive{
         padding: 20px 0 20px 15px;
     }
 
-    header.responsive > a, header.responsive .dropdown-1, header.responsive .dropdown-2{
+    header.responsive > a.menu_responsive, header.responsive .dropdown-1, header.responsive .dropdown-2{
         display: block;
         width: 100%;
         margin: 0;
@@ -793,9 +794,9 @@ header .icon_menu{
         position: absolute;
         right: 0;
         text-align: center;
-        width: 5% !important;
+        width: 10%;
         top: 10px;
-        padding: 0 !important;
+        padding: 0;
     }
     
     header{
@@ -817,8 +818,6 @@ header .icon_menu{
         top: 0;
     }
 
-
-    
 
 }
 
@@ -863,7 +862,6 @@ header .icon_menu{
     }
 
 
-
 }
 
 
@@ -875,8 +873,6 @@ header .icon_menu{
     .case_gestionsadmin{
         width: 100%;
     }
-
-
 
 
 }

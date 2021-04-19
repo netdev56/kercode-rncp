@@ -34,11 +34,6 @@
         <p class="inscription_connexion"><a href="administration.php?action=registrationFormUser">Créer un compte</a></p>
 
     </section>
-    <?php
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
-?>
     
 </body>
 </html>

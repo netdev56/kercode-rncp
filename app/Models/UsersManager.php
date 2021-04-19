@@ -51,9 +51,4 @@ class UsersManager extends Manager{
     }
 
 
-
-
-    
-
-
 }

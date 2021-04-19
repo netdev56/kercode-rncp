@@ -2,7 +2,6 @@
 
 namespace Project\Models;
 
-
 use Exception;
 
 $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
@@ -31,5 +30,6 @@ class Manager {
             die('Erreur: ' . $e->getMessage());
         }
     }
+
 
 }

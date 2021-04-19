@@ -94,6 +94,4 @@ class GuestbookCommentManager extends Manager{
     }
 
 
-
-
 }

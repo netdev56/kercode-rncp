@@ -89,12 +89,6 @@
 
 </section>
 
-<?php
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
-?>
-
 
 <?php // Script JS pour la station de météo ?>
 <script type="module" src="app/public/back/js/meteo.js"></script>

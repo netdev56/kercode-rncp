@@ -42,6 +42,4 @@ class ContactFormManager extends Manager{
     }
 
 
-
-
-    }
+}

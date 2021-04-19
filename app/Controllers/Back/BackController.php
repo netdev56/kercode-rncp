@@ -4,17 +4,11 @@ namespace Project\Controllers\Back;
 
 class BackController{
 
-    // Page de connexion Administration
-    function connexionAdministration(){
-        require 'app/views/back/connexionUsers.php';
-    }
-
-
+    // INSCRIPTION
     // Page d'inscription Utilisateur
     function registrationFormUser(){
         require 'app/views/back/registrationFormUser.php';
     }
-
 
     // Formulaire d'inscription Utilisateur
     function createUser($pseudo, $lastname, $firstname, $mail, $pass){
@@ -37,6 +31,13 @@ class BackController{
 
     }
 
+
+
+    // CONNEXION
+    // Page de connexion Administration
+    function connexionAdministration(){
+        require 'app/views/back/connexionUsers.php';
+    }
 
     // Formulaire de connexion Administration
     function connexionAdmin($mail, $pass){ 
@@ -65,6 +66,7 @@ class BackController{
     }
 
 
+
     // DASHBOARD
     // Page Dashboard
     function dashboard(){
@@ -74,7 +76,7 @@ class BackController{
 
 
     // LIVRE D'OR
-    // Page des commentaires du livre d'or de l'utilisateur USER
+    // Page : Afficher des commentaires du livre d'or de l'utilisateur USER
     function guestbook($id){
         $guestbookComment = new \Project\Models\GuestbookCommentManager();
         $allGuestbookComment = $guestbookComment->affichageGuestbookComment($id);
@@ -86,6 +88,7 @@ class BackController{
     function guestbookAdmin(){
         $guestbookAdmin = new \Project\Models\GuestbookCommentManager();
         $allGuestbookCommentsAdmin = $guestbookAdmin->affichageGuestbookCommentAdmin();
+
         require 'app/views/back/guestbook.php';
     }
 
@@ -181,7 +184,7 @@ class BackController{
 
         $uploadOK = 1;
 
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION)); // contient l'extension du fichier
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
         // on vérifie que le fichier image est une image réelle
         if (isset($_POST["submit"])){
@@ -195,7 +198,7 @@ class BackController{
 
                 // Tous les formats des fichiers
                 if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType !="gif" && $imageFileType !="webp"){
-                    echo "Seuls les formats JPG, JPEG, PNG WEBP & GIF sont authorisé.";
+                    echo "Seuls les formats JPG, JPEG, PNG, WEBP & GIF sont authorisé.";
                     $uploadOK = 0;
                 }
 
@@ -229,7 +232,7 @@ class BackController{
         require 'app/views/back/informationsUsers.php';
     }
 
-    // Editer les informations de l'utilisateur dans la page informationsUsers.php
+    // Editer les informations de l'utilisateur
     function editUsersInfos($id_user, $pseudo, $lastname, $firstname, $email){
         $editinfosusers = new \Project\Models\InformationsUsersManager();
         $editinfos = $editinfosusers->editinfosuser($id_user, $pseudo, $lastname, $firstname, $email);
@@ -261,7 +264,6 @@ class BackController{
 
         header("Location: administration.php?action=editInfosUsers&id=$id_user");
     }
-
 
 
 

@@ -22,7 +22,6 @@ class ArticleManager extends Manager{
     }
 
 
-
     // Page actualités
     public function readArticles($quantitePage){
 
@@ -147,7 +146,5 @@ class ArticleManager extends Manager{
         return $req;
     }
 
-
-
-    
+   
 }

@@ -21,7 +21,7 @@
     <?php // Menu ?>
     <header id="navbar_haut" class="nav_haut">
 
-        <a href="administration.php?action=dashboard&id=<?= $_SESSION['id'] ?>">Dashboard</a>
+        <a class="menu_responsive" href="administration.php?action=dashboard&id=<?= $_SESSION['id'] ?>">Dashboard</a>
 
         <?php if($_SESSION['roleusers'] == 'admin'){ ?>
             <div class="dropdown-1">
@@ -47,15 +47,13 @@
         </div>
         <?php } ?>
 
-        <a href="administration.php?action=editInfosUsers&id=<?= $_SESSION['id'] ?>">Vos informations</a>
+        <a class="menu_responsive" href="administration.php?action=editInfosUsers&id=<?= $_SESSION['id'] ?>">Vos informations</a>
 
         <?php if($_SESSION['roleusers'] == 'admin'){ ?>
-            <a href="administration.php?action=contactMessaging">Messagerie</a>
+            <a class="menu_responsive" href="administration.php?action=contactMessaging">Messagerie</a>
         <?php } ?>
 
-        <a href="./" target="blank">Retour au site</a>
-
-        <a href="administration.php?action=deconnexionDashboard" class="deconnexion_style">Deconnexion</a>
+        <a class="menu_responsive deconnexion_style" href="administration.php?action=deconnexionDashboard">Deconnexion</a>
 
         <a class="icon_menu" onclick="menuResponsive()">&equiv;</a>
 

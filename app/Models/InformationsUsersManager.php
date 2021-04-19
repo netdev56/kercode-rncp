@@ -70,5 +70,4 @@ class InformationsUsersManager extends Manager{
     }
 
 
-
 }
