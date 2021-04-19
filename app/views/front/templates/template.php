@@ -45,7 +45,6 @@
             <i class="menu-btn"><img src="app/public/front/images/menu/bars-menu.svg" alt="Menu"></i>
         </div>
             
-        
     </header>
 
     <main class="footer_bas">
@@ -66,7 +65,6 @@
         </div>
         <div class="btn-seconnecter">
             <a href="administration.php?action=connexionAdministration" rel="noopener noreferrer">Se connecter</a>
-            <!-- <a href="administration.php?action=connexionAdministration" target="_blank" rel="noopener noreferrer">Se connecter</a> -->
 
         </div>
     </footer>

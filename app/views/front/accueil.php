@@ -5,7 +5,7 @@
 <section class="slides">
 
     <div class="slides-item">
-        <img src="/app/public/front/images/pageaccueil/gite-la-cave.webp" alt="Gîte La Cave à Pluneret">
+        <img src="app/public/front/images/pageaccueil/gite-la-cave.webp" alt="Gîte La Cave à Pluneret">
         <div class="slides-texte">
             <h1>Gîte La Cave</h1>
             <p>Le gîte est située au fond d’un village de Pluneret, entre Auray et Sainte Anne d’Auray, à 15 min du Golfe du Morbihan.</p>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="slides-item">
-        <img src="/app/public/front/images/pageaccueil/quiberon.webp" alt="Quiberon">
+        <img src="app/public/front/images/pageaccueil/quiberon.webp" alt="Quiberon">
         <div class="slides-texte">
             <h2>Quiberon</h2>
             <p>La ville se situe à la pointe de la presqu’île du même nom. C’est le parfait endroit pour admirer la côte sauvage. Aussi, les amoureux de sports nautiques pourront profiter de beaux spots sur la presqu’île.</p>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="slides-item">
-        <img src="/app/public/front/images/pageaccueil/st-anne-d-auray.webp" alt="Sainte Anne d'Auray">
+        <img src="app/public/front/images/pageaccueil/st-anne-d-auray.webp" alt="Sainte Anne d'Auray">
         <div class="slides-texte">
             <h2>Sainte Anne d'Auray</h2>
             <p>Il est facile de s’y rendre à pied depuis un petit chemin situé au fond du village où se situe le gîte. La petite commune est connue pour son caractère religieux et sa basilique qui accueille chaque année des pèlerins venant de loin.</p>
@@ -33,12 +33,6 @@
 <?php // Zones de textes ?>
 <section>
 
-
-<?php 
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
-?>
     <div class="articles_accueil_style">
 
         <?php // Zone 1 ?>
@@ -55,7 +49,7 @@ echo "</pre>";
         <?php // Zone 2 ?>
         <div class="taille_max">
             <div class="taille_1170 bloc-zone2-accueil">
-                <div><img src="/app/public/front/images/pageaccueil/gite-pluneret-morbihan.webp" alt="Gîte dans le Morbihan"></div>
+                <div><img src="app/public/front/images/pageaccueil/gite-pluneret-morbihan.webp" alt="Gîte dans le Morbihan"></div>
                 <div class="zone2_accueil">
                     <h3>GÎTE TOUT CONFORT</h3>
                     <span>POUR 4 PERSONNES – ACCÈS PMR</span>
@@ -80,7 +74,7 @@ echo "</pre>";
         <div class="carteAccueil">
             <div class="card">
                 <div class="blocImage">
-                    <img src="/app/public/front/images/pageaccueil/carnac-morbihan.webp" alt="Carnac">
+                    <img src="app/public/front/images/pageaccueil/carnac-morbihan.webp" alt="Carnac">
                 </div>
                 <div class="bloc-texte">
                     <h4>Carnac</h4>
@@ -89,7 +83,7 @@ echo "</pre>";
             </div>
             <div class="card">
                 <div class="blocImage">
-                    <img src="/app/public/front/images/pageaccueil/vannes-morbihan.webp" alt="Vannes">
+                    <img src="app/public/front/images/pageaccueil/vannes-morbihan.webp" alt="Vannes">
                 </div>
                 <div class="bloc-texte">
                     <h4>Vannes</h4>
@@ -98,7 +92,7 @@ echo "</pre>";
             </div>
             <div class="card">
                 <div class="blocImage">
-                    <img src="/app/public/front/images/pageaccueil/belle-ile-en-mer-morbihan.webp" alt="Belle Île en Mer">
+                    <img src="app/public/front/images/pageaccueil/belle-ile-en-mer-morbihan.webp" alt="Belle Île en Mer">
                 </div>
                 <div class="bloc-texte">
                     <h4>Belle Île en Mer</h4>

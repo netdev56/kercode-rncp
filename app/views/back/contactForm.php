@@ -1,7 +1,6 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-
 <section class="taille_1170 bloc_gestions">
 
     <h1>Vos messages</h1>

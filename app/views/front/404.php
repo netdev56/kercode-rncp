@@ -1,8 +1,6 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-
-
 <section class="taille_1170 bloc_titre_general">
     <h1>Page introuvable !</h1>
 </section>

@@ -1,7 +1,6 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-
 <?php $managementEditAdminMdp = $managementEditionAdminMdp->fetch() ?>
 
 <section class="taille_1170 bloc_gestions">

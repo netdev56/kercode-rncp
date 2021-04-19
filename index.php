@@ -12,8 +12,6 @@ try{
 
     if(isset($_GET['action'])){
 
-
-
         // ACTUALITES
         // Page Actualités
         if($_GET['action'] == 'actualites'){
@@ -36,6 +34,7 @@ try{
 
               
 
+        // CONTACTEZ-NOUS !
         // Page Contactez-Nous ! - Envoi du formulaire
         else if($_GET['action'] == 'contactForm'){
             $lastname = htmlspecialchars($_POST['lastname_contactform']);
@@ -57,6 +56,7 @@ try{
             } catch(Error $_) {
                 $frontController->p404();
             }
+
         }
 
 
@@ -71,6 +71,5 @@ try{
 }catch(Exception $e){ //En cas de problème sur l'action, il affiche un message d'erreur
     
     die('Erreur: ' . $e->getMessage());
-
     
 }

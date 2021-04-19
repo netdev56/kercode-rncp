@@ -1,7 +1,7 @@
 /* ----- POLICE D ECRITURE ----- */
 @font-face {
 	font-family: "cinzel";
-	src: url('/app/public/front/policedecriture/cinzel-regular.otf');
+	src: url('../policedecriture/cinzel-regular.otf');
     font-display: swap;
 }
 
@@ -529,7 +529,7 @@ header .btn_menu{
 }
 
 .parallax_legite{
-    background: url('/app/public/front/images/pagelegite/plage-bretagne-morbihan.webp') no-repeat center;
+    background: url('../images/pagelegite/plage-bretagne-morbihan.webp') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
@@ -830,7 +830,7 @@ header .btn_menu{
 
 .bloc_contact_gauche{
     width: 50%;
-    background: url("/app/public/front/images/pagecontact/contact-gite-la-cave-morbihan.jpg") no-repeat center;
+    background: url("../images/pagecontact/contact-gite-la-cave-morbihan.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -984,25 +984,6 @@ header .btn_menu{
 }
 
 .bloc_mentionslegales a{
-    color: var(--fd-menu-beige);
-    text-decoration: none;
-}
-
-
-
-
-/* ----- PAGE POLITIQUE DE CONFIDENTIALITE ----- */
-.bloc_cookie h2{
-    font-size: 1.5rem;
-    margin: 20px 0 10px;
-}
-
-.bloc_cookie b{
-    font-weight: bold;
-    margin: 10px 0 10px;
-}
-
-.bloc_cookie a{
     color: var(--fd-menu-beige);
     text-decoration: none;
 }
@@ -1233,8 +1214,6 @@ footer .coordonnees-aligne p{
     }
 
 
-
-
 }
 
 
@@ -1328,8 +1307,6 @@ footer .coordonnees-aligne p{
     }
 
 
-
-
 }
 
 
@@ -1376,8 +1353,6 @@ footer .coordonnees-aligne p{
     }
 
 
-
-
 }
 
 
@@ -1399,7 +1374,6 @@ footer .coordonnees-aligne p{
     .carteAccueil .card:hover .bloc-texte {
         margin-top: -59px;
     }
-
 
 
 }

@@ -1,13 +1,6 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-
-<?php
-echo'<pre>';
-print_r($_SESSION);
-echo'</pre>';
-?>
-
 <section class="taille_1170 bloc_gestions">
 
     <?php // Formulaire pour ajouter un article ?>
@@ -22,7 +15,6 @@ echo'</pre>';
             <input type="text" id="description_articles" name="description_articles" placeholder="100 caractères max">
 
             <textarea id="content" name="content" placeholder="Contenu" style="height:100px; width:300px"></textarea>
-
 
             <div class="style_btn_informationsusers">
                 <button type="submit" class="btn_modifier_informationsusers">Ajouter</button>

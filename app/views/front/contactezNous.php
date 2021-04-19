@@ -53,7 +53,9 @@
         </p>
     <?php } ?>
 
+    
 
+    <?php // FORMULAIRE DE CONTACT ?>  
     <div class="bloc_formulaire_contact">
 
         <?php // Image de gauche ?>
@@ -65,12 +67,12 @@
             <p class="texte_accroche_contact">Vous souhaitez faire une réservation par téléphone, vous avez des questions, informations ou autres… N’hésitez pas à nous contacter.</p>
 
             <div class="icones_contact">
-                <img src="/app/public/front/images/icones/adresse-gite-la-cave-pluneret.svg" class="icones_adresse_contact" alt="Localisation du gîte La Cave">
+                <img src="app/public/front/images/icones/adresse-gite-la-cave-pluneret.svg" class="icones_adresse_contact" alt="Localisation du gîte La Cave">
                 <p class="icones_texte_contact">43 rue de Lescheby 56400 Pluneret</p>
             </div>
 
             <div class="icones_contact">
-                <img src="/app/public/front/images/icones/telephone-gite-la-cave.svg" class="icones_telephone_contact" alt="Contactez le gîte La Cave">
+                <img src="app/public/front/images/icones/telephone-gite-la-cave.svg" class="icones_telephone_contact" alt="Contactez le gîte La Cave">
                 <p class="icones_texte_contact">02 97 56 40 75</p>
             </div>
 
