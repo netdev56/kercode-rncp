@@ -34,11 +34,24 @@ https://github.com/netdev56/kercode-rncp.git
 
 ----
 
-Installer ```COMPOSER```
+#### Installer ```COMPOSER```
+
+Télécharger Composer : ```https://getcomposer.org/download```
+
+Dans le terminal : ```composer init```
+
+Installer l'autoload dans le fichier composer.json
+```
+"autoload": {
+        "psr-4" : {"Project\\" : "App"}
+    },
+```
+
+Dans le terminal, mettre à jour les fichiers de composer : ```composer update```
 
 ----
 
-Installer ```PHP dotenv```
+#### Installer ```PHP dotenv```
 
 Dans le terminal : ```composer require vlucas/phpdotenv```
 
