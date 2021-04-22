@@ -42,7 +42,12 @@
         </nav>
 
         <div class="btn_menu">
-            <i class="menu-btn"><img src="app/public/front/images/menu/bars-menu.svg" alt="Menu"></i>
+            <?php // Icone menu burger ?>
+            <i class="menu-btn"><svg viewBox="0 0 100 80" width="40" height="40">
+                <rect class="menu-btn-svg" width="60" height="10"></rect>
+                <rect class="menu-btn-svg" y="25" width="60" height="10"></rect>
+                <rect class="menu-btn-svg" y="50" width="60" height="10"></rect>
+            </svg></i>
         </div>
             
     </header>

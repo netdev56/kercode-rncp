@@ -1,8 +1,6 @@
 User-agent:*
-Disallow:/index.php?action=erreurForm
 Disallow:/index.php?action=mentionsLegales
 Disallow:/index.php?action=p404
-Disallow:/index.php?action=cookie
 Disallow:/administration.php?action=dashboard
 Disallow:/administration.php?action=actualitesAdmin
 Disallow:/administration.php?action=articleAdminEdition
@@ -12,9 +10,12 @@ Disallow:/administration.php?action=guestbook
 Disallow:/administration.php?action=commentEdition
 Disallow:/administration.php?action=managementAdmin
 Disallow:/administration.php?action=adminEditionManagement
+Disallow:/administration.php?action=managementAdminEditMdp
 Disallow:/administration.php?action=managementUsers
 Disallow:/administration.php?action=userEditionManagement
+Disallow:/administration.php?action=managementUsersEditMdp
 Disallow:/administration.php?action=editInfosUsers
+Disallow:/administration.php?action=informationsUsersMdp
 Disallow:/administration.php?action=contactMessaging
 Disallow:/administration.php?action=registrationFormUser
 Disallow:/administration.php?action=connexionAdministration

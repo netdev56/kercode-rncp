@@ -5,6 +5,12 @@
     font-display: swap;
 }
 
+@font-face {
+	font-family: "roboto";
+	src: url('../policedecriture/roboto-light.ttf');
+    font-display: swap;
+}
+
 
 
 
@@ -14,7 +20,6 @@
     --blanc-color: #fff;
     --noir-color: #000;
     --rouge-color: #ff0000;
-    --vert-color: #49AB44;
     --fd-body-marron-color: #141414;
     --gen_beige-clair-color: #cec2ab;
     --beige-fonce-color: #b5a992;
@@ -756,6 +761,7 @@ header .btn_menu{
 
 .bloc_titre_actus_single p{
     color: var(--fd-menu-beige);
+    font-style: italic;
 }
 
 .taille_max_actus_single{
@@ -809,6 +815,7 @@ header .btn_menu{
 .post_livre{
     color: var(--blanc-color);
     margin-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .post_livre span{
@@ -881,7 +888,7 @@ header .btn_menu{
     padding: 0.5rem 1rem;
     outline: none;
     font-size: 1.1rem;
-    background-color: var(--vert-color);
+    background-color: var(--gen_beige-clair-color);
     cursor: pointer;
     border: none;
     color: var(--noir-color);
@@ -892,7 +899,7 @@ header .btn_menu{
     margin-bottom: 20px;
 }
 
-.texte_accroche_contact{
+.bloc_contact_droite .texte_accroche_contact{
     font-size: 1.1rem;
     color: var(--noir-color);
     margin-bottom: 30px;
@@ -1029,12 +1036,14 @@ footer .coordonnees-aligne{
 }
 
 footer .coordonnees-aligne p{
-    margin: 4px
+    margin: 4px;
+    font-family: roboto;
 }
 
 .coordonnees-aligne a{
     color: var(--blanc-color);
     text-transform: none;
+    font-family: roboto;
 }
 
 .coordonnees-aligne a:hover{
@@ -1050,6 +1059,7 @@ footer .coordonnees-aligne p{
 
 .btn-seconnecter a{
     color: var(--blanc-color);
+    font-family: roboto;
 }
 
 .btn-seconnecter:hover{
@@ -1093,8 +1103,8 @@ footer .coordonnees-aligne p{
         overflow-y: auto;
     }
 
-    header .menu_nav.active-nav .menu-btn img{
-        display: none;  
+    .menu-btn-svg{
+        fill:var(--fd-menu-beige);
     }
 
     header .menu_nav a{
