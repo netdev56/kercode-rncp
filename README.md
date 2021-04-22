@@ -38,25 +38,14 @@ https://github.com/netdev56/kercode-rncp.git
 
 Télécharger Composer : ```https://getcomposer.org/download```
 
-Dans le terminal : ```composer init```
+Dans le terminal : ```composer install```
 
-Installer l'autoload dans le fichier composer.json
-```
-"autoload": {
-        "psr-4" : {"Project\\" : "App"}
-    },
-```
-
-Dans le terminal, mettre à jour les fichiers de composer : ```composer update```
 
 ----
 
 #### Installer ```PHP dotenv```
 
-Dans le terminal : ```composer require vlucas/phpdotenv```
-
 A la racine du site, renommer ```env_local``` en ```.env``` et remplacer vos crédentials dans les variables d'environnements à l'intérieur du fichier
-
 
 
 
@@ -71,4 +60,4 @@ ou sur le lien suivant : ```https://kercode-rncp.wecoding.fr/hydk5178_kercode-rn
 ----
 
 
-Bonne installation à vous...
+Bonne installation...
