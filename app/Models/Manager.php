@@ -18,11 +18,12 @@ class Manager {
         $db_name = $_ENV['DB_NAME'];
         $db_user = $_ENV['DB_USER'];
         $db_pass = $_ENV['DB_PASS'];
+        $db_port = $_ENV['DB_PORT'];
 
 
         try{
 
-            $bdd = new \PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8", $db_user, $db_pass);
+            $bdd = new \PDO("mysql:host=$db_host:$db_port;dbname=$db_name;charset=utf8", $db_user, $db_pass);
             return $bdd;
 
         }catch(Exception $e){ //Affiche un message d'erreur en cas de problème de connexion à la base de donnée
