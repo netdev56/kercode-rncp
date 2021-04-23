@@ -19,7 +19,7 @@ Vous trouverez le code administrateur en message privé, ainsi que les codes d'a
 
 
 
-### Diagramme UML de la base de donnée
+### Diagramme UML de la base de données
 
 ![](UML-Kercode---RNCP.jpg)
 
@@ -53,7 +53,7 @@ Plus d'infos sur ```https://github.com/vlucas/phpdotenv```
 
 ----
 
-Vous trouverez la base de donnée à la racine du site : ```hydk5178_kercode-rncp.sql``` 
+Vous trouverez la base de données à la racine du site : ```hydk5178_kercode-rncp.sql``` 
 
 ou sur le lien suivant : ```https://kercode-rncp.wecoding.fr/hydk5178_kercode-rncp.sql```
 
