@@ -11,6 +11,9 @@
     <?php // Feuille de style CSS ?>
     <link rel="stylesheet" href="app/public/back/css/style.css">
 
+    <?php // Favicon ?>
+    <link rel="icon" href="app/public/front/images/icones/favicon.ico" />
+
     <title>Gîte La Cave - Connexion</title>
 </head>
 

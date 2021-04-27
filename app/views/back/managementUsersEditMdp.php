@@ -1,33 +1,33 @@
 <?php // Inject le header - contenu du tampon de sortie ?>
 <?php ob_start(); ?>
 
-<?php $managementEditUser = $allUserMdp->fetch() ?>
+        <?php $managementEditUser = $allUserMdp->fetch() ?>
 
-<section class="taille_1170 bloc_gestions">
+        <section class="taille_1170 bloc_gestions">
 
-    <h1>Informations de l'utilisateur</h1>
+            <h1>Informations de l'utilisateur</h1>
 
-    <form action="administration.php?action=editManagementUserMdp&id=<?= $managementEditUser['id'] ?>" method="POST">
-        <table>
-            <tr>
-                <td><label for="pass">Votre mot de passe :</label></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="informationsusers_input"><input type="password" name="pass" id="pass" placeholder="*********"></td>
-                <td><span id="btn_password"><img src="app/public/back/images/icones/view.png"></span></td>
-            </tr>
-            <tr>
-                <td class="style_btn_informationsusers"><button type="submit" class="btn_modifier_informationsusers_mdp">Enregistrer</button></td>
-                <td></td>
-            </tr>
-        </table>
-    </form>
+            <form action="administration.php?action=editManagementUserMdp&id=<?= $managementEditUser['id'] ?>" method="POST">
+                <table>
+                    <tr>
+                        <td><label for="pass">Votre mot de passe :</label></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="informationsusers_input"><input type="password" name="pass" id="pass" placeholder="*********"></td>
+                        <td><span id="btn_password"><img src="app/public/back/images/icones/view.png"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="style_btn_informationsusers"><button type="submit" class="btn_modifier_informationsusers_mdp">Enregistrer</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
 
-</section>
+        </section>
 
-<?php // Script JS pour l'affichage du mot de passe ?>
-<script src="app/public/back/js/visibleMotDePasse.js"></script>
+        <?php // Script JS pour l'affichage du mot de passe ?>
+        <script src="app/public/back/js/visibleMotDePasse.js"></script>
 
 
 <?php // termine la session de temporisation ?>

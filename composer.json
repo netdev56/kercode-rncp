@@ -1,5 +1,5 @@
 {
-    "name": "kercode/projet-final",
+    "name": "netde/kercode-rncp",
     "description": "Projet Final",
     "authors": [
         {
@@ -8,9 +8,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "Project\\" : "./app"
-        }
+        "psr-4" : {"Project\\" : "App"}
     },
     "require": {
         "vlucas/phpdotenv": "^5.3"
