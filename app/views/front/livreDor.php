@@ -12,10 +12,10 @@
 
                 <?php foreach($allGuestbookComments as $allGuestbook){ ?>
 
-                    <article class="commentaires_livre">
+                    <div class="commentaires_livre">
                             <p class="post_livre">Posté par <span><?=$allGuestbook['pseudo']?></span> le <?=$allGuestbook['datePublication'] ?></p>
                             <p><?= nl2br($allGuestbook['comments']) ?></p>
-                    </article>
+                    </div>
 
                 <?php } ?>
 
